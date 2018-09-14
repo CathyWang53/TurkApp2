@@ -1,10 +1,14 @@
 from flask import (
-    Blueprint, render_template, request, json
+    Blueprint, render_template, request, json, flash, redirect, request, url_for
 )
 import csv
 import os
 import random
 from random import choice
+
+from website1 import db
+from website1.models import ResultTable
+from website1.models import Results
 
 pyint = 1
 skipTime = 0
@@ -103,6 +107,22 @@ def scene1(pyint,skipTime,showIntro):
         print(' ')
         count = count + 1
     print(type(pydata[0][3]))
+
+    if request.method == 'POST':
+        name = request.form['name']
+        if not name:
+            flash('result is required.')
+            else:
+                # db.session.add(ResultTable(answer=name))
+                db.session.add(Results(section=pyint*3+skipTime, answer=name))
+                db.session.commit()
+#                if pyint<4:
+#                    return redirect(url_for('s1_v2.scene1',pyint = pyint+1))
+#                else:
+#                    return redirect('/thanks')
+
+    results = ResultTable.query.all()
+
 
     return render_template('index_v2_loop.html',
                            htmlint=pyint,
