@@ -54,7 +54,17 @@
                         <h3 class="text-center" id="recording-title"> What would you say? </h3>
                         <p></p>
                         <div align="center">
-                            <button  id="speak" title="speak" class="button speak-btn"> <img src="/static/images/favicon-32x32.png"/>Speak</button>
+
+                          <form method="POST">
+                            <div class="form-group">
+                                <input id="note-textarea" type="text" class="form-control"
+                                placeholder="Your words will be shown here" rows="5"
+                                name="name" required>
+                            </div>
+                            <button id="speak" title="speak" class="button speak-btn" type="submit">
+                              <img src="/static/images/favicon-32x32.png"/>Speak</button>
+                          </form>
+
                             <h4 id="recording-instructions" >  Note: Please speak naturally.</h4>
                             <a href="{{htmlint+1}}/0" id="go-next-btn" class="button" > Go next</a>
                         </div>
@@ -90,6 +100,9 @@
                     </div>
 
                 <div id="formats">Format: start recording to see sample rate</div>
+                <form method="POST">
+
+                </form>
 
                <h3> My Recorder</h3>
               <ol id="recordingsList"></ol>

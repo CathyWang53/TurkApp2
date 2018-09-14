@@ -18,7 +18,7 @@ var notesList = $('ul#notes');
 var morehelp = $('#morehelp');
 var example = $('#example');
 var help = $('.help');
-//var data = eval('{{data}}');
+
 
 var noteContent = '';
 var finishFlag=false;
@@ -152,15 +152,18 @@ $('#speak').on('click',function(e){
               recognition.stop();
               $('#speak').hide();
               instructions.text('Recognizing...Please wait for 2 second');
+              //stopRecording();
+              stopRecordingMp3();
+              //afterEndRcd();
                setTimeout(function(){afterEndRcd()},2000);
         }
 });
 
 
-// Sync the text inside the text area with the noteContent variable.
-//noteTextarea.on('input', function() {
-//  noteContent = $(this).val();
-//})
+//Sync the text inside the text area with the noteContent variable.
+noteTextarea.on('input', function() {
+ noteContent = $(this).val();
+})
 
 //$('#help-btn').on('click',function(e){
 //                  help.toggle();
@@ -263,8 +266,7 @@ function afterEndRcd(){
     RcdingFlag=false;
     $('#speak').html('Speak Again');
 
-    //stopRecording();
-    stopRecordingMp3();
+
 
     // Save note to localStorage.
     // The key is the dateTime with seconds, the value is the content of the note.

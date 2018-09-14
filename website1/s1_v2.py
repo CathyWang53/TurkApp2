@@ -109,19 +109,24 @@ def scene1(pyint,skipTime,showIntro):
     print(type(pydata[0][3]))
 
     if request.method == 'POST':
+        print("successfully add to database1")
         name = request.form['name']
         if not name:
+            print("successfully add to database2")
             flash('result is required.')
+        
         else:
+            print("successfully add to database3")
             # db.session.add(ResultTable(answer=name))
             db.session.add(Results(section=pyint*3+skipTime, answer=name))
             db.session.commit()
+
 #                if pyint<4:
 #                    return redirect(url_for('s1_v2.scene1',pyint = pyint+1))
 #                else:
 #                    return redirect('/thanks')
 
-    results = ResultTable.query.all()
+    #results = ResultTable.query.all()
 
 
     return render_template('index_v2_loop.html',
