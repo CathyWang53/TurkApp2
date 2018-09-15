@@ -120,6 +120,7 @@ def scene1(pyint,skipTime,showIntro):
             # db.session.add(ResultTable(answer=name))
             db.session.add(Results(section=pyint*3+skipTime, answer=name))
             db.session.commit()
+            print("successfully add to database4")
 
 #                if pyint<4:
 #                    return redirect(url_for('s1_v2.scene1',pyint = pyint+1))

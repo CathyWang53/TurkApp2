@@ -29,7 +29,7 @@ var inst = setInterval(change, 1000);
 
 
 $('.no-browser-support').hide();
-$('#save-note-btn').hide();
+//$('#save-note-btn').hide();
 $('#morehelp').hide();
 $('#example').hide();
 $('#moreExample').hide();
