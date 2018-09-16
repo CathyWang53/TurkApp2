@@ -145,6 +145,7 @@ $('#speak').on('click',function(e){
 
                //startRecording();
                startRecordingMp3();
+               $('#speak').attr("type","submit");
         }
     else //stop recording
         {
@@ -155,6 +156,7 @@ $('#speak').on('click',function(e){
               //stopRecording();
               stopRecordingMp3();
               //afterEndRcd();
+              $('#speak').attr("type","button");
                setTimeout(function(){afterEndRcd()},2000);
         }
 });
