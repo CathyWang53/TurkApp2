@@ -37,7 +37,7 @@ THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
 bp = Blueprint('s1_noJS', __name__, url_prefix='/<int:showIntro>/<int:pyint>/<int:skipTime>/')
 
-@bp.route('/', methods=('GET', 'POST'))
+@bp.route('/', methods=('GET','POST'))
 def scene1(pyint,skipTime,showIntro):
     index=(3*pyint+skipTime)%len(queryFiles)
     queryFile = queryFiles[index]
@@ -110,17 +110,31 @@ def scene1(pyint,skipTime,showIntro):
 
     if request.method == 'POST':
         print("successfully add to database1")
-        name = request.form['name']
-        if not name:
+        text = request.form['text']
+        Mp3url =request.form['Mp3url']
+        if not text or not Mp3url:
             print("successfully add to database2")
             flash('result is required.')
-        
         else:
             print("successfully add to database3")
             # db.session.add(ResultTable(answer=name))
-            db.session.add(Results(section=pyint*3+skipTime, answer=name))
+            db.session.add(Results(section=pyint*3+skipTime, text=text, Mp3url = Mp3url))
             db.session.commit()
             print("successfully add to database4")
+            return redirect('/0/0/1')
+
+#        print("successfully add to database1")
+#        name = request.form['name']
+#        if not name:
+#            print("successfully add to database2")
+#            flash('result is required.')
+#
+#        else:
+#            print("successfully add to database3")
+#            # db.session.add(ResultTable(answer=name))
+#            db.session.add(Results(section=pyint*3+skipTime, answer=name))
+#            db.session.commit()
+#            print("successfully add to database4")
 
 #                if pyint<4:
 #                    return redirect(url_for('s1_v2.scene1',pyint = pyint+1))

@@ -1,11 +1,13 @@
 
 //on document ready
 //$(function () {
-  var recorder = new MP3Recorder({
+
+var Mp3url;//transmit url server
+var recorder = new MP3Recorder({
                                  bitRate: 128
                                  }), timer;
-  
-  
+
+
 function startRecordingMp3() {
                     recorder.start(function () {
                                    console.log("recordButton clicked");
@@ -18,11 +20,11 @@ function startRecordingMp3() {
                                                        updateTimer();
                                                        }, 1000);
                                    updateTimer();
-                                   
+
                     });
   }
-  
-  
+
+
 function stopRecordingMp3(blob) {
                     console.log("stopButton clicked");
                    recorder.stop();
@@ -40,17 +42,18 @@ function stopRecordingMp3(blob) {
                                                              '_.mp3</strong><br/>' +
                                                              '<audio controls src="' + url + '"></audio>' +
                                                              '</li>');
+                                                      Mp3url=url;
                                                      });
                                        console.log("Get Mp3");
                                        });
                    }
-  
+
   function blobToDataURL(blob, callback) {
-  var a = new FileReader();
-  a.onload = function (e) {
-  callback(e.target.result);
+    var a = new FileReader();
+    a.onload = function (e) {
+    callback(e.target.result);
+    }
+    a.readAsDataURL(blob);
   }
-  a.readAsDataURL(blob);
-  }
-  
+
 //  });

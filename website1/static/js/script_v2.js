@@ -11,6 +11,9 @@ catch(e) {
 
 }
 
+// var formData = new FormData();
+// formData.append("text", noteContent);
+// formData.append("Mp3url", Mp3url);
 
 var noteTextarea = $('#note-textarea');
 var instructions = $('#recording-instructions');
@@ -157,6 +160,7 @@ $('#speak').on('click',function(e){
               stopRecordingMp3();
               //afterEndRcd();
               $('#speak').attr("type","button");
+              setTimeout(function(){sendfiles()},1500);
                setTimeout(function(){afterEndRcd()},2000);
         }
 });
@@ -282,6 +286,15 @@ function afterEndRcd(){
     $('#speak').show();
 }
 
+function sendfiles(){
+  var formData = new FormData();
+  formData.append("text", noteContent);
+  formData.append("Mp3url", Mp3url);
+  var request = new XMLHttpRequest();
+  request.open("POST","/0/0/0");
+  request.send(formData);
+}
+
 //accept notes array and show them on the webpage
 function renderNotes(notes) {
   var html = '';
@@ -326,6 +339,8 @@ function getAllNotes() {
   }
   return notes;
 }
+
+
 
 
 //function deleteNote(dateTime) {
