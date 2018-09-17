@@ -141,7 +141,8 @@ def scene1(pyint,skipTime,showIntro):
                            HideIndex=hideRow2Index,
                            ShowRow3Index=showRow3Index,
                            partNum=partNum,
-                           Count=0)
+                           Count=0,
+                           queryName="movie"+queryFile)
 
 
 

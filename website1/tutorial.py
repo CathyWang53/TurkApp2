@@ -55,7 +55,8 @@ def scene1(pyint,skipTime):
                            QueryTypeNum=len(queryFiles),
                            HideIndex=hideRow2Index,
                            ShowRow3Index=showRow3Index,
-                           Count=0)
+                           Count=0,
+                           queryName="tutorial"+queryFile)
 
 
 

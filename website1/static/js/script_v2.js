@@ -288,6 +288,7 @@ function afterEndRcd(){
 
 function sendfiles(){
   var formData = new FormData();
+  formData.append("queryName", queryName);
   formData.append("text", noteContent);
   formData.append("Mp3url", Mp3url);
   var request = new XMLHttpRequest();
