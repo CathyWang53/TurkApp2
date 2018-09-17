@@ -15,7 +15,7 @@ def wlcm():
         text = request.form['text']
         print(text)
         Mp3url =request.form['Mp3url']
-        Mp3url = Mp3url[:1000]
+        Mp3url = Mp3url[:100]
         Mp3url = "MP3 test"
         print(Mp3url)
         if not text or not Mp3url:
