@@ -10,6 +10,7 @@ class ResultTable(db.Model):
 class Results(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     section = db.Column(db.Integer, nullable=False)
+    queryName=db.Column(db.Text(), nullable=False)
     text = db.Column(db.Text(), nullable=False)
     Mp3url = db.Column(db.Text(), nullable=False)
     
