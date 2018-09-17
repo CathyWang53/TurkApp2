@@ -143,8 +143,8 @@
         <script src="{{url_for('static',filename='js/app.js')}}"></script>
 <!--tranverse to text-->
 
-        <script>
-          var queryName = {{queryName}}; //for script_v2.js to use to transmit coersponding data 
+        <script type="text/javascript">
+          var queryName = {{ queryName }} //for script_v2.js to use to transmit coersponding data
         </script>
 
         <script src="{{url_for('static',filename='js/script_v2.js')}}"></script>
