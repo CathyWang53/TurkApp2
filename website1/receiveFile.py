@@ -13,6 +13,7 @@ def wlcm():
     if request.method == 'POST':
         print("successfully add to database1")
         text = request.form['text']
+        print(text)
         Mp3url =request.form['Mp3url']
         if not text or not Mp3url:
             print("successfully add to database2")
