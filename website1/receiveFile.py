@@ -15,6 +15,7 @@ def wlcm():
         text = request.form['text']
         print(text)
         Mp3url =request.form['Mp3url']
+        Mp3url = Mp3url[:1000]
         print(Mp3url)
         if not text or not Mp3url:
             print("successfully add to database2")
