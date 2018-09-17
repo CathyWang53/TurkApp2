@@ -26,7 +26,7 @@ def wlcm():
         else:
             print("successfully add to database3")
             # db.session.add(ResultTable(answer=name))
-            db.session.add(Results(section=0, text=text, Mp3url= Mp3url))
+            db.session.add(Results(section=0, text=text, Mp3url= Mp3url, queryName=queryName))
             db.session.commit()
             print("successfully add to database4")
     return 'success'
