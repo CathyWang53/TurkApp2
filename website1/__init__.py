@@ -39,5 +39,8 @@ def create_app():
     
     from . import OpenQuestions
     app.register_blueprint(OpenQuestions.bp)
+    
+    from . import receiveFile
+    app.register_blueprint(receiveFile.bp)
 
     return app

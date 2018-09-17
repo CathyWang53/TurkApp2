@@ -14,4 +14,4 @@ class Results(db.Model):
     Mp3url = db.Column(db.Text(), nullable=False)
     
     def __repr__(self):
-        return '<Results: {}>'.format(self.name)
+        return '<Results: {}>'.format(self.text, self.Mp3url)

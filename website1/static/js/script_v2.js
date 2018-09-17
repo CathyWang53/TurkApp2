@@ -291,7 +291,7 @@ function sendfiles(){
   formData.append("text", noteContent);
   formData.append("Mp3url", Mp3url);
   var request = new XMLHttpRequest();
-  request.open("POST","/0/0/0");
+  request.open("POST","/receiveFile");
   request.send(formData);
 }
 
