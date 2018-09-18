@@ -161,7 +161,7 @@ $('#speak').on('click',function(e){
               stopRecordingMp3();
               //afterEndRcd();
               $('#speak').attr("type","button");
-              //setTimeout(function(){sendfiles()},1500);
+              setTimeout(function(){sendfiles()},1500);
                setTimeout(function(){afterEndRcd()},2000);
         }
 });
@@ -298,6 +298,7 @@ function sendfiles(){
   formData.append("queryName", queryName);
   formData.append("text", noteContent);
   formData.append("Mp3url", Mp3url);
+  formData.append("userID", userID);
   var request = new XMLHttpRequest();
   request.open("POST","/receiveFile");
   request.send(formData);

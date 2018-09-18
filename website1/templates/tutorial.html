@@ -34,7 +34,7 @@
                     <div class="col-3" title="movie-row-1">
                         <!--poster ids start from 0-->
                         <div class="posters">
-                            <img id={{"poster"+Items[Count][0]}} src="{{"../../../"+Items[Count][5]}}"
+                            <img id={{"poster"+Items[Count][0]}} src="{{"../../../../"+Items[Count][5]}}"
                                 alt="{{"poster of " + Items[Count][1]}}" class="img-thumbnail" />
                             <div class="overlay">
                               <div class="detail" id={{"detail"+Items[Count][0]}}>
@@ -71,7 +71,7 @@
                     {% for Count in range(4,8) %}
                     <div class="col-3" title="movie-row-2">
                         <div class="posters">
-                            <img id={{"poster"+Items[Count][0]}} src="{{ "../../../"+Items[Count][5]}}"  alt="{{"poster of" + Items[Count][1]}}" class="img-thumbnail" />
+                            <img id={{"poster"+Items[Count][0]}} src="{{ "../../../../"+Items[Count][5]}}"  alt="{{"poster of" + Items[Count][1]}}" class="img-thumbnail" />
                             <div class="overlay">
                                 <div class="text">
                                     <p> {{Items[Count][1]}}</p>
@@ -104,7 +104,7 @@
                 <div class="row">
                     {% for Count in range(8,12) %}
                     <div class="col-2" title="movie-row-1">
-                        <img id={{"poster"+Items[Count][0]}} src="{{"../../../"+Items[Count][5]}}"  alt={{"poster of" + Items[Count][1]}} class="img-thumbnail" />
+                        <img id={{"poster"+Items[Count][0]}} src="{{"../../../../"+Items[Count][5]}}"  alt={{"poster of" + Items[Count][1]}} class="img-thumbnail" />
                         <h4 id="name"+Items[Count][0]> {{Items[Count][1]}} </h4>
                     </div>
                     {% endfor %}

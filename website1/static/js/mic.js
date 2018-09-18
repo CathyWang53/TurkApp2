@@ -12,8 +12,8 @@
 
     var recorder = this, startTime = 0, context = new AudioContext();
     config = config || {};
-    var realTimeWorker = new Worker("../../../static/js/worker-realtime.js");
- 
+    var realTimeWorker = new Worker("../../../../static/js/worker-realtime.js");
+
 
     // Initializes LAME so that we can record.
     this.initialize = function () {
