@@ -155,12 +155,13 @@ $('#speak').on('click',function(e){
           //afterEndRcd();
               recognition.stop();
               $('#speak').hide();
+
               instructions.text('Recognizing...Please wait for 2 second');
               //stopRecording();
               stopRecordingMp3();
               //afterEndRcd();
               $('#speak').attr("type","button");
-              setTimeout(function(){sendfiles()},1500);
+              //setTimeout(function(){sendfiles()},1500);
                setTimeout(function(){afterEndRcd()},2000);
         }
 });
@@ -262,15 +263,21 @@ $('#help-btn').mouseout(function(){
 function afterEndRcd(){
   if(!noteContent.length) {
    instructions.text('We could not hear from you. Please try again.');
+   $('#speak').html('Speak Again');
+   $('#speak').show();
   }
   else{
+    // $('#back-btn').hide();
+    // $('#next-btn').hide();
+    $('#recording-title').hide();
+    $('#operation').hide();
    instructions.text('You can go next.');
    finishFlag=true;
    $('#save-note-btn').show();
    $('#go-next-btn').show();
   }
     RcdingFlag=false;
-    $('#speak').html('Speak Again');
+    //$('#speak').html('Speak Again');
 
 
 
@@ -283,7 +290,7 @@ function afterEndRcd(){
     renderNotes(getAllNotes());
     noteTextarea.val('');
     finishFlag=false;
-    $('#speak').show();
+    //$('#speak').show();
 }
 
 function sendfiles(){
