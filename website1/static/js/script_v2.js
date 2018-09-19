@@ -21,6 +21,7 @@ var notesList = $('ul#notes');
 var morehelp = $('#morehelp');
 var example = $('#example');
 var help = $('.help');
+var userID;
 
 
 var noteContent = '';
@@ -172,6 +173,15 @@ noteTextarea.on('input', function() {
  noteContent = $(this).val();
 })
 
+$('#saveID').on('click',function(e){
+  userID = $('#userID').val();
+  console.log(userID);
+  Cookies.set('userID', userID);
+  console.log("cookie set");
+  window.location.href='/1/0/0/userID';
+
+});
+
 //$('#help-btn').on('click',function(e){
 //                  help.toggle();
 //                  });
@@ -295,6 +305,7 @@ function afterEndRcd(){
 
 function sendfiles(){
   var formData = new FormData();
+  userID = Cookies.get('userID');
   formData.append("queryName", queryName);
   formData.append("text", noteContent);
   formData.append("Mp3url", Mp3url);

@@ -55,18 +55,22 @@
       </div> -->
       <br/>
       <br/>
-      <form method="POST">
+      <!-- <form method="POST"> -->
         <div class="form-group">
           <h5> Please input your user ID: </h5>
-            <input id="note-textarea" type="text" class="form-control"
+            <input id="userID" type="text" class="form-control"
             placeholder="" rows="5"
             name="name" required>
         </div>
-        <button id="testSaveNote" type="submit"> Submit and go next </button>
-      </form>
+        <button id="saveID" type="submit"> Submit and go next </button>
+      <!-- </form> -->
 
 
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="{{url_for('static',filename='js/script_v2.js')}}"></script>
 
     </body>
 </html>

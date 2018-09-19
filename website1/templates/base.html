@@ -143,9 +143,11 @@
         <script src="{{url_for('static',filename='js/app.js')}}"></script>
 <!--tranverse to text-->
 
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
         <script type="text/javascript">
           var queryName = "{{ queryName }}"; //for script_v2.js to use to transmit coersponding data
-          var userID = "{{userID}}";
+          //var userID = "{{userID}}";
         </script>
 
         <script src="{{url_for('static',filename='js/script_v2.js')}}"></script>
