@@ -182,12 +182,13 @@ $('#saveID').on('click',function(e){
 
 });
 $('#saveFeedback').on('click',function(e){
+    var formData = new FormData();
   feedback = $('#feedback').val();
   userID = Cookies.get('userID', userID);
   formData.append("feedback", feedback);
   formData.append("userID", userID);
   var request = new XMLHttpRequest();
-  request.open("POST","/receiveFile");
+  request.open("POST","/receiveFeedback");
   request.send(formData);
 
   //show code

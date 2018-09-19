@@ -47,4 +47,7 @@ def create_app():
     from . import receiveFile
     app.register_blueprint(receiveFile.bp)
 
+    from . import receiveFeedback
+    app.register_blueprint(receiveFeedback.bp)
+
     return app
