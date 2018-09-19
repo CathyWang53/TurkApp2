@@ -35,18 +35,18 @@ showRow3Index = [18]
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
 
-bp = Blueprint('s1_noJS', __name__, url_prefix='/<int:showIntro>/<int:pyint>/<int:skipTime>/')
+bp = Blueprint('s1_noJS', __name__, url_prefix='/<int:showIntro>/<int:pyint>/<int:skipTime>/<id>')
 
 @bp.route('/', methods=('GET','POST'))
-def scene1(pyint,skipTime,showIntro):
+def scene1(pyint,skipTime,showIntro,id):
     index=(3*pyint+skipTime)%len(queryFiles)
     queryFile = queryFiles[index]
     file1Name = THIS_FOLDER + '/moviedata/%s.csv' % queryFile
     print("the movies are from:")
     print(file1Name)
-    
+
     pydata=[[0 for col in range(22)] for row in range(movieNum)]
-    
+
     with open(file1Name) as file1:
         reader=csv.reader(file1, delimiter=',')
         count=0
@@ -63,7 +63,7 @@ def scene1(pyint,skipTime,showIntro):
             index = data[2].find(',')
             if (index != -1):
                 data[2]=data[2][:index]
-    
+
     # delete redundant actors, only keep the first three ones
     for data in pydata:
         index = -1
@@ -72,7 +72,7 @@ def scene1(pyint,skipTime,showIntro):
             if (index0 != -1):
                 index = index0+1
                 data[3] = data[3][:index]+' '+data[3][index:] #insert a ' ' after the ','
-                
+
                 index1 = data[3][index:].find(',') #find the second ','
                 if (index1 != -1):
                     index=index + index1 +1
@@ -91,7 +91,7 @@ def scene1(pyint,skipTime,showIntro):
             if (index0 != -1):
                 index = index0+1
                 data[4] = data[4][:index]+' '+data[4][index:] #insert a ' ' after the ','
-                
+
                 index1 = data[4][index:].find(',') #find the second ','
                 if (index1 != -1):
                     index=index + index1 +1
@@ -142,7 +142,5 @@ def scene1(pyint,skipTime,showIntro):
                            ShowRow3Index=showRow3Index,
                            partNum=partNum,
                            Count=0,
-                           queryName="movie"+queryFile)
-
-
-
+                           queryName="movie"+queryFile,
+                           userID=id)

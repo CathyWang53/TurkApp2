@@ -10,6 +10,6 @@ def wlcm():
         name = request.form['name']
 
         # redirect
-        return redirect(url_for('tutorial.scene1', id=name,pyint=0,skipTime=0))
+        return redirect(url_for('tutorial.scene1', id=name, pyint=0, skipTime=0))
 
     return render_template('welcome.html')

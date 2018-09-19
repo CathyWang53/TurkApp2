@@ -130,15 +130,15 @@
                     {{ super() }}
                     {% if (htmlint+SkipTime) == 1  %}
                         <script>
-                            $("#go-next-btn").attr("href", "/1/0/0");
+                            $("#go-next-btn").attr("href", "/1/0/0/{{userID}}");
                         </script>
                     {% elif (htmlint+SkipTime) == 3  %}
                           <script>
-                              $("#go-next-btn").attr("href", "/1/5/0");
+                              $("#go-next-btn").attr("href", "/1/5/0/{{userID}}");
                           </script>
                     {% else %}
                         <script>
-                            $("#go-next-btn").attr("href", "/tutorial/{{htmlint+SkipTime+1}}/0");
+                            $("#go-next-btn").attr("href", "/tutorial/{{htmlint+SkipTime+1}}/0/{{userID}}");
                         </script>
                     {% endif %}
 
