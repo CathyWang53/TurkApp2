@@ -181,6 +181,18 @@ $('#saveID').on('click',function(e){
   window.location.href='/1/0/0/';
 
 });
+$('#saveFeedback').on('click',function(e){
+  feedback = $('#feedback').val();
+  userID = Cookies.get('userID', userID);
+  formData.append("feedback", feedback);
+  formData.append("userID", userID);
+  var request = new XMLHttpRequest();
+  request.open("POST","/receiveFile");
+  request.send(formData);
+
+  //show code
+
+});
 
 //$('#help-btn').on('click',function(e){
 //                  help.toggle();
