@@ -35,10 +35,10 @@ showRow3Index = [18]
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
 
-bp = Blueprint('s1_noJS', __name__, url_prefix='/<int:showIntro>/<int:pyint>/<int:skipTime>/<id>')
+bp = Blueprint('s1_noJS', __name__, url_prefix='/<int:showIntro>/<int:pyint>/<int:skipTime>/')
 
 @bp.route('/', methods=('GET','POST'))
-def scene1(pyint,skipTime,showIntro,id):
+def scene1(pyint,skipTime,showIntro):
     index=(3*pyint+skipTime)%len(queryFiles)
     queryFile = queryFiles[index]
     file1Name = THIS_FOLDER + '/moviedata/%s.csv' % queryFile
@@ -142,5 +142,4 @@ def scene1(pyint,skipTime,showIntro,id):
                            ShowRow3Index=showRow3Index,
                            partNum=partNum,
                            Count=0,
-                           queryName="movie"+queryFile,
-                           userID=id)
+                           queryName="movie"+queryFile)

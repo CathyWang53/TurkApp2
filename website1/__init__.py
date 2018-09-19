@@ -8,7 +8,7 @@ db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
-    
+
     app.config.from_mapping(
                             SECRET_KEY = os.environ.get('SECRET_KEY') or 'dev_key',
                             SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
@@ -17,29 +17,33 @@ def create_app():
                             )
 
     db.init_app(app)
-    migrate.init_app(app, db) 
+    migrate.init_app(app, db)
 
     from . import models
 
-    @app.route('/test')
+    # @app.route('/test')
+    # def test():
+    #     return 'hello, world!'
+
+    @app.route('/code')
     def test():
-        return 'hello, world!'
+        return 'Your code is: qwe2p0shfw0'
 
     from . import welcome
     app.register_blueprint(welcome.bp)
-    
+
     from . import finish
     app.register_blueprint(finish.bp)
 
     from . import s1_v2
     app.register_blueprint(s1_v2.bp)
-    
+
     from . import tutorial
     app.register_blueprint(tutorial.bp)
-    
+
     from . import OpenQuestions
     app.register_blueprint(OpenQuestions.bp)
-    
+
     from . import receiveFile
     app.register_blueprint(receiveFile.bp)
 

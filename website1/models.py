@@ -16,3 +16,12 @@ class Results(db.Model):
 
     def __repr__(self):
         return '<Results: {}>'.format(self.name)
+
+class feedbacks(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    userid=db.Column(db.Text(),nullable=False)
+    feedback = db.Column(db.Text(), nullable=False)
+    duration = db.Column(db.Integer, nullable=False)
+
+    def __repr__(self):
+        return '<feedback: {}>'.format(self.name)

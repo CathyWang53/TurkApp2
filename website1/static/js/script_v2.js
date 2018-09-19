@@ -178,7 +178,7 @@ $('#saveID').on('click',function(e){
   console.log(userID);
   Cookies.set('userID', userID);
   console.log("cookie set");
-  window.location.href='/1/0/0/userID';
+  window.location.href='/1/0/0/';
 
 });
 
