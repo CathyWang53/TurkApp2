@@ -9,9 +9,9 @@ class ResultTable(db.Model):
 
 class Results(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    userID=db.Column(db.Text(),nullable=False)
+    userid=db.Column(db.Text(),nullable=False)
     text = db.Column(db.Text(), nullable=False)
-    Mp3url = db.Column(db.Text(), nullable=False)
+    mp3url = db.Column(db.Text(), nullable=False)
     queryname = db.Column(db.Text(), nullable=False)
 
     def __repr__(self):
