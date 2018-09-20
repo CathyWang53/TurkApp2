@@ -49,12 +49,14 @@
 
       <!-- <form method="POST"> -->
         <div class="form-group">
-          <h5> We would love to hear feedback from you: </h5>
+          <h5 id="fbHeadline"> We would love to hear feedback from you: </h5>
             <textarea id="feedback" type="text" class="form-control"
             placeholder="" rows="5"
             name="name" required></textarea>
         </div>
         <button id="saveFeedback" type="submit"> Submit to get payment </button>
+        <h5 id="codeHeadline"> Your code is: </h5>
+        <h5 id="code"> h2bfo9kh-wb2 </h5>
       <!-- </form> -->
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -62,9 +64,16 @@
       <!-- <script src="{{url_for('static',filename='js/script_v2.js')}}"></script> -->
       <script src="{{url_for('static',filename='js/timer.js')}}"></script>
       <script>
+      $('#code').hide();
+      $('#codeHeadline').hide();
       $('#saveFeedback').on('click',function(e){
+        var feedback = $('#feedback').val();
+        if (feedback.replace(/^\s+|\s+$/g, "").length == 0 || feedback ==""){
+          alert('Please enter your feedback');
+        }
+        else{
           var formData = new FormData();
-          var feedback = $('#feedback').val();
+
           var userID = Cookies.get('userID', userID);
           formData.append("feedback", feedback);
           formData.append("userID", userID);
@@ -75,6 +84,11 @@
 
           $(this).hide();
           $('#feedback').hide();
+          $('#fbHeadline').hide();
+          $('#code').show();
+          $('#codeHeadline').show();
+        }
+
 
         //show code
       });
