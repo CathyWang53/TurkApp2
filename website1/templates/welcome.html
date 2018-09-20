@@ -68,9 +68,31 @@
 
     </div>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script src="{{url_for('static',filename='js/script_v2.js')}}"></script>
+    <!-- <script src="{{url_for('static',filename='js/script_v2.js')}}"></script> -->
+    <!-- <script src="{{url_for('static',filename='js/timer.js')}}"></script> -->
+
+    <script>
+    $(function () {
+      var sec=0;
+      setInterval(function(){
+        sec=sec+1;
+      },1000);
+
+      $('#saveID').on('click',function(e){
+        var userID = $('#userID').val();
+        console.log(userID);
+        Cookies.set('userID', userID);
+        console.log("cookie set");
+        window.location.href='/1/0/0/';
+        Cookies.set('timer', sec.toString());
+      });
+
+
+    });
+    </script>
 
     </body>
 </html>

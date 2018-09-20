@@ -16,7 +16,9 @@ def wlcm():
 
         userID=request.form['userID']
         feedback=request.form['feedback']
+        timer=request.form['timer']
         print(feedback)
+        print(timer)
 
         if not feedback:
             print("successfully add to database2")
@@ -24,7 +26,7 @@ def wlcm():
         else:
             print("successfully add to database3")
             # db.session.add(ResultTable(answer=name))
-            db.session.add(feedbacks( userid = userID, feedback=feedback, duration=10))
+            db.session.add(feedbacks( userid = userID, feedback=feedback, duration=timer))
             db.session.commit()
             print("successfully add to database4")
     return 'success'

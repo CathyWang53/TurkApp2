@@ -59,7 +59,26 @@
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-      <script src="{{url_for('static',filename='js/script_v2.js')}}"></script>
+      <!-- <script src="{{url_for('static',filename='js/script_v2.js')}}"></script> -->
+      <script src="{{url_for('static',filename='js/timer.js')}}"></script>
+      <script>
+      $('#saveFeedback').on('click',function(e){
+          var formData = new FormData();
+          var feedback = $('#feedback').val();
+          var userID = Cookies.get('userID', userID);
+          formData.append("feedback", feedback);
+          formData.append("userID", userID);
+          formData.append("timer",Number(Cookies.get('timer')));
+          var request = new XMLHttpRequest();
+          request.open("POST","/receiveFeedback");
+          request.send(formData);
+
+          $(this).hide();
+          $('#feedback').hide();
+
+        //show code
+      });
+      </script>
 
     </body>
 </html>

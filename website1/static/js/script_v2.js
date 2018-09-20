@@ -173,27 +173,8 @@ noteTextarea.on('input', function() {
  noteContent = $(this).val();
 })
 
-$('#saveID').on('click',function(e){
-  userID = $('#userID').val();
-  console.log(userID);
-  Cookies.set('userID', userID);
-  console.log("cookie set");
-  window.location.href='/1/0/0/';
 
-});
-$('#saveFeedback').on('click',function(e){
-    var formData = new FormData();
-  feedback = $('#feedback').val();
-  userID = Cookies.get('userID', userID);
-  formData.append("feedback", feedback);
-  formData.append("userID", userID);
-  var request = new XMLHttpRequest();
-  request.open("POST","/receiveFeedback");
-  request.send(formData);
 
-  //show code
-
-});
 
 //$('#help-btn').on('click',function(e){
 //                  help.toggle();
