@@ -22,15 +22,17 @@
     <body>
         <div class="container">
 
-            <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+            <h3 id="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
 
+            <div class = "headlines">
             {% block headline %}
-            <div class="row">
-              <div class="col-2">
-                <h2 id="headline">Scenario: {{htmlint+SkipTime+1}} </h2>
+              <div class="row">
+                <div class="col-2">
+                  <h2 id="headline">Scenario: {{htmlint+SkipTime+1}} </h2>
+                </div>
               </div>
-            </div>
             {% endblock %}
+            </div>
 
 <!--            {% block app %}{% endblock %}-->
 
@@ -151,7 +153,7 @@
         </script>
 
         <script src="{{url_for('static',filename='js/script_v2.js')}}"></script>
-        <script src="{{url_for('static',filename='js/timer.js')}}"></script> 
+        <script src="{{url_for('static',filename='js/timer.js')}}"></script>
 
 
 

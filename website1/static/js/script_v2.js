@@ -6,14 +6,12 @@ try {
 }
 catch(e) {
   console.error(e);
-  $('.no-browser-support').show();
+  $('#no-browser-support').show();
   $('.app').hide();
+  $('.headlines').hide();
 
 }
 
-// var formData = new FormData();
-// formData.append("text", noteContent);
-// formData.append("Mp3url", Mp3url);
 
 var noteTextarea = $('#note-textarea');
 var instructions = $('#recording-instructions');
@@ -32,7 +30,7 @@ var counter=0;
 var inst = setInterval(change, 1000);
 
 
-$('.no-browser-support').hide();
+$('#no-browser-support').hide();
 //$('#save-note-btn').hide();
 $('#morehelp').hide();
 $('#example').hide();
