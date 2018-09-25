@@ -50,4 +50,7 @@ def create_app():
     from . import receiveFeedback
     app.register_blueprint(receiveFeedback.bp)
 
+    from website1.GameVersionFolder import game
+    app.register_blueprint(game.bp)
+
     return app

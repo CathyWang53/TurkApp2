@@ -6,6 +6,8 @@ import os
 import random
 from random import choice
 
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+
 from website1 import db
 from website1.models import ResultTable
 from website1.models import Results
@@ -28,18 +30,20 @@ queryFiles=["Leonardo DiCaprio", "Jennifer Lawrence","Hepburn",
             "Shark","Robot","Female",
             "Old", "JapanAnime&Others", "2018Horror&Others1",
             "2018Horror&Others1","Book",]
+
 hideRow2Index = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 showRow3Index = [18]
 
 
-THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
 
 bp = Blueprint('s1_noJS', __name__, url_prefix='/<int:showIntro>/<int:pyint>/<int:skipTime>/')
 
 @bp.route('/', methods=('GET','POST'))
 def scene1(pyint,skipTime,showIntro):
-    index=(3*pyint+skipTime)%len(queryFiles)
+    randomInt=request.cookies.get('randomInt')
+
+    index=(3*pyint+(skipTime+int(randomInt))%3)%len(queryFiles)
     queryFile = queryFiles[index]
     file1Name = THIS_FOLDER + '/moviedata/%s.csv' % queryFile
     print("the movies are from:")
