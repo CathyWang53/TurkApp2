@@ -17,11 +17,12 @@ catch(e) {
 var noteTextarea = $('#note-textarea');
 var instructions = $('#recording-instructions');
 var notesList = $('ul#notes');
+
 var morehelp = $('#morehelp');
 var example = $('#example');
 var help = $('.help');
-var userID;
 
+var userID;
 
 var noteContent = '';
 var finishFlag=false;
@@ -32,7 +33,6 @@ var inst = setInterval(change, 1000);
 
 
 
-//$('#save-note-btn').hide();
 $('#morehelp').hide();
 $('#example').hide();
 $('#moreExample').hide();
@@ -41,17 +41,19 @@ $('#go-next-btn').hide();
 $('#help1').hide();
 
 
+/*-----------------------------
+      variables for game version
+------------------------------*/
+var answerTime=0;
+$('#check1').hide();
+$('#check2').hide();
+$('#check3').hide();
 
-//function getInt(vars)
-//{
-//    return vars;
-//}
 
 // Get all notes from previous sessions and display them.
 var notes = getAllNotes();
 renderNotes(notes);
 
-//var dynamic_data = JSON.parse(data);
 
 
 /*-----------------------------
@@ -112,27 +114,7 @@ recognition.onerror = function(event) {
       App buttons and input
 ------------------------------*/
 
-//$('#start-record-btn').on('click', function(e) {
-//  noteTextarea.val('');
-//  noteContent = '';
-//  recognition.start();
-//  finishFlag=false;
-//  $('#save-note-btn').hide();
-//});
-//
-//
-//$('#pause-record-btn').on('click', function(e) {
-//  recognition.stop();
-//  if(!noteContent.length) {
-//        instructions.text('We could not hear from you. Please try again.');
-//     }
-//                          else{
-//                            instructions.text('Cong! You can go next.');
-//                            finishFlag=true;
-//                            $('#save-note-btn').show();
-//                            //show “go next”
-//                          }
-//});
+
 
 $('#speak').on('click',function(e){
      if (!RcdingFlag)//start recording
@@ -141,7 +123,6 @@ $('#speak').on('click',function(e){
                noteContent = '';
                recognition.start();
                finishFlag=false;
-               $('#save-note-btn').hide();
                $('#go-next-btn').hide();
                RcdingFlag=true;
                $("#speak").html('Stop');
@@ -156,7 +137,7 @@ $('#speak').on('click',function(e){
               recognition.stop();
               $('#speak').hide();
 
-              instructions.text('Recognizing...Please wait for 2 second');
+              instructions.text('Recognizing...Please wait for 2 seconds');
               //stopRecording();
               stopRecordingMp3();
               //afterEndRcd();
@@ -179,20 +160,7 @@ noteTextarea.on('input', function() {
 //                  help.toggle();
 //                  });
 
-$('#save-note-btn').on('click', function(e) {
-  recognition.stop();
 
-  if(!noteContent.length && !finishFlag) {
-    instructions.text('Only after you answer this question, you can go next. If you have spoken, press stop button to finish.');
-  }
-  else {
-
-    //go to the next page
-                       //window.location.href='/jsint';
-
-  }
-
-});
 
 
 
@@ -270,14 +238,33 @@ function afterEndRcd(){
    $('#speak').show();
   }
   else{
-    // $('#back-btn').hide();
-    // $('#next-btn').hide();
-    $('#recording-title').hide();
-    $('#operation').hide();
-   instructions.text('You can go next.');
-   finishFlag=true;
-   $('#save-note-btn').show();
-   $('#go-next-btn').show();
+    if (answerTime >= 2){
+      $('#recording-title').hide();
+      $('#operation').hide();
+     instructions.text('You can go next.');
+     finishFlag=true;
+     //$('#save-note-btn').show();
+     $('#go-next-btn').show();
+     $('#check3').show();
+     $('#answer3').html('<h5> &nbsp &nbsp  &nbsp  &nbsp 3. &nbsp</h5>')
+    }
+    else if (answerTime == 0){
+      $('#speak').show();
+      $('#speak').html('Speak Again');
+      instructions.text('Think of another example.');
+      answerTime = answerTime+1;
+      $('#check1').show();
+      $('#answer1').html('<h5> &nbsp &nbsp  &nbsp  &nbsp 1. &nbsp</h5>')
+    }
+    else{
+      $('#speak').show();
+      $('#speak').html('Speak Again');
+      instructions.text('Think of one last example.');
+      answerTime = answerTime+1;
+      $('#check2').show();
+      $('#answer2').html('<h5> &nbsp &nbsp  &nbsp  &nbsp 2. &nbsp</h5>')
+    }
+
   }
     RcdingFlag=false;
     //$('#speak').html('Speak Again');
@@ -298,13 +285,15 @@ function afterEndRcd(){
 
 function sendfiles(){
   var formData = new FormData();
-  userID = Cookies.get('userID');
+  //userID = Cookies.get('userID');
+  userID='cat';
   formData.append("queryName", queryName);
   formData.append("text", noteContent);
   formData.append("Mp3url", Mp3url);
   formData.append("userID", userID);
+  formData.append("answerTime", answerTime);
   var request = new XMLHttpRequest();
-  request.open("POST","/receiveFile");
+  request.open("POST","/receiveFile_ver_game");
   request.send(formData);
 }
 

@@ -29,7 +29,6 @@
               <div class="row">
                 <div class="col-2">
                   <h2 id="headline">Scenario: {{htmlint+SkipTime+1}} </h2>
-                  <p> This is the game version </p>
                 </div>
               </div>
             {% endblock %}
@@ -70,7 +69,7 @@
                             <img src="/static/images/favicon-32x32.png"/>Speak</button>
 
                             <h4 id="recording-instructions" >  Note: Please speak naturally.</h4>
-                            <a href="{{htmlint+1}}/0" id="go-next-btn" class="button" > Go next</a>
+                            <a href="/game/{{htmlint+1}}" id="go-next-btn" class="button" > Go next</a>
                         </div>
                         <p></p>
                     </div>

@@ -24,4 +24,24 @@ class feedbacks(db.Model):
     duration = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):
-        return '<feedback: {}>'.format(self.name)
+        return '<feedbacks: {}>'.format(self.name)
+
+class results_ver_game(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    userid=db.Column(db.Text(),nullable=False)
+    text = db.Column(db.Text(), nullable=False)
+    mp3url = db.Column(db.Text(), nullable=False)
+    queryname = db.Column(db.Text(), nullable=False)
+    answerTime = db.Column(db.Integer, nullable=False) 
+
+    def __repr__(self):
+        return '<results_ver_game: {}>'.format(self.name)
+
+class feedbacks_ver_game(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    userid=db.Column(db.Text(),nullable=False)
+    feedback = db.Column(db.Text(), nullable=False)
+    duration = db.Column(db.Integer, nullable=False)
+
+    def __repr__(self):
+        return '<feedbacks_ver_game: {}>'.format(self.name)

@@ -29,6 +29,7 @@ def create_app():
     def test():
         return 'Your code is: qwe2p0shfw0'
 
+######## Picture Version ###########
     from . import welcome
     app.register_blueprint(welcome.bp)
 
@@ -50,7 +51,14 @@ def create_app():
     from . import receiveFeedback
     app.register_blueprint(receiveFeedback.bp)
 
+########## Game Version ############
     from website1.GameVersionFolder import game
     app.register_blueprint(game.bp)
+
+    from website1.GameVersionFolder import gameIntro
+    app.register_blueprint(gameIntro.bp)
+
+    from website1.GameVersionFolder import receiveFile_ver_game
+    app.register_blueprint(receiveFile_ver_game.bp)
 
     return app

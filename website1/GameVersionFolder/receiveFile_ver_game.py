@@ -2,11 +2,10 @@ from flask import (
     Blueprint, render_template, request, flash
 )
 
-bp = Blueprint('receiveFile', __name__, url_prefix='/receiveFile')
+bp = Blueprint('receiveFile_ver_game', __name__, url_prefix='/receiveFile_ver_game')
 
 from website1 import db
-from website1.models import ResultTable
-from website1.models import Results
+from website1.models import results_ver_game
 
 @bp.route('', methods=('POST','GET'))
 def wlcm():
@@ -21,6 +20,7 @@ def wlcm():
         print(queryName)
         userID=request.form['userID']
         print(userID)
+        answerTime=request.form['answerTime']
 
         if not Mp3url:
             print("successfully add to database2")
@@ -28,7 +28,7 @@ def wlcm():
         else:
             print("successfully add to database3")
             # db.session.add(ResultTable(answer=name))
-            db.session.add(Results( userid = userID, text=text, mp3url= Mp3url, queryname=queryName))
+            db.session.add(results_ver_game( userid = userID, text=text, mp3url= Mp3url, queryname=queryName,answerTime=answerTime))
             db.session.commit()
             print("successfully add to database4")
     return 'success'
