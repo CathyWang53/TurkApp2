@@ -32,7 +32,7 @@ def game(pyint):
 
     queryName=choice(queries[pyint])
 
-    return render_template('GameVersionFolder/game.html',
+    return render_template('GameVersionHtml/game.html',
     htmlint=pyint,
     SkipTime=skipTime,
     queryName=queryName

@@ -47,7 +47,7 @@ def scene1(pyint,skipTime):
         print(' ')
         count = count + 1
 
-    return render_template('tutorial.html',
+    return render_template('PosterVersionHtml/tutorial.html',
                            htmlint=pyint,
                            SkipTime=skipTime,
                            FLag=flag,

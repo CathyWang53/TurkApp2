@@ -2,7 +2,7 @@ from flask import (
     Blueprint, render_template, request, url_for,redirect
 )
 
-bp = Blueprint('gameIntro', __name__, url_prefix='/gameIntro')
+bp = Blueprint('easyIntro', __name__, url_prefix='/easyIntro')
 
 @bp.route('/', methods=('GET', 'POST'))
 def intro():
@@ -12,4 +12,4 @@ def intro():
     #     # redirect
     #     return redirect(url_for('tutorial.scene1', id=name, pyint=0, skipTime=0))
 
-    return render_template('GameVersionFolder/gameIntro.html')
+    return render_template('EasyVersionHtml/easyIntro.html')

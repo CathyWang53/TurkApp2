@@ -135,7 +135,7 @@ def scene1(pyint,skipTime,showIntro):
     #results = ResultTable.query.all()
 
 
-    return render_template('index_v2_loop.html',
+    return render_template('PosterVersionHtml/index_v2_loop.html',
                            htmlint=pyint,
                            SkipTime=skipTime,
                            showIntro=showIntro,

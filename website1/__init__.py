@@ -29,46 +29,47 @@ def create_app():
     def test():
         return 'Your code is: qwe2p0shfw0'
 
-######## Picture Version ###########
-    from . import welcome
-    app.register_blueprint(welcome.bp)
+    from . import receiveFeedback
+    app.register_blueprint(receiveFeedback.bp)
 
     from . import finish
     app.register_blueprint(finish.bp)
 
-    from . import s1_v2
+######## Poster Version ###########
+    from website1.PosterVersionPy import welcome
+    app.register_blueprint(welcome.bp)
+
+    from website1.PosterVersionPy import s1_v2
     app.register_blueprint(s1_v2.bp)
 
-    from . import tutorial
+    from website1.PosterVersionPy import tutorial
     app.register_blueprint(tutorial.bp)
 
-    from . import OpenQuestions
+    from website1.PosterVersionPy import OpenQuestions
     app.register_blueprint(OpenQuestions.bp)
 
-    from . import receiveFile
+    from website1.PosterVersionPy import receiveFile
     app.register_blueprint(receiveFile.bp)
 
-    from . import receiveFeedback
-    app.register_blueprint(receiveFeedback.bp)
 
 ########## Game Version ############
-    from website1.GameVersionFolder import game
+    from website1.GameVersionPy import game
     app.register_blueprint(game.bp)
 
-    from website1.GameVersionFolder import gameIntro
+    from website1.GameVersionPy import gameIntro
     app.register_blueprint(gameIntro.bp)
 
-    from website1.GameVersionFolder import receiveFile_ver_game
+    from website1.GameVersionPy import receiveFile_ver_game
     app.register_blueprint(receiveFile_ver_game.bp)
 
 ########## Easy Version ############
-    from website1.EasyVersionFolder import EasyContent
+    from website1.EasyVersionPy import EasyContent
     app.register_blueprint(EasyContent.bp)
 
-    from website1.EasyVersionFolder import EasyIntro
+    from website1.EasyVersionPy import EasyIntro
     app.register_blueprint(EasyIntro.bp)
 
-    from website1.EasyVersionFolder import receiveFile_ver_Easy
+    from website1.EasyVersionPy import receiveFile_ver_Easy
     app.register_blueprint(receiveFile_ver_Easy.bp)
 
     return app

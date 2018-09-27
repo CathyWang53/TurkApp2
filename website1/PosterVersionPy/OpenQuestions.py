@@ -11,7 +11,7 @@ bp = Blueprint('OpenQuestions', __name__, url_prefix='/OpenQuestions/<int:questi
 
 @bp.route('/', methods=('GET', 'POST'))
 def OpenQuestions(questionNum):
-    return render_template('OpenQuestions.html',
+    return render_template('PosterVersionHtml/OpenQuestions.html',
                            questionNum = questionNum,
                            htmlint=htmlint,
                            queryName="movie"+queryFiles[questionNum]

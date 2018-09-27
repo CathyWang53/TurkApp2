@@ -17,7 +17,7 @@ queries = [["comedy"],
 ["interesting characters"],
 ["Best","➕",">2000"]
 ]
-helps = [""]
+helps = ["0","Brad Pitt is a famous film star","0"]
 
 
 @bp.route('/', methods=('GET', 'POST'))
@@ -31,7 +31,7 @@ def game(pyint):
 
     queryName=queries[pyint]
 
-    return render_template('EasyVersionFolder/easy.html',
+    return render_template('EasyVersionHtml/easy.html',
     htmlint=pyint,
     SkipTime=skipTime,
     queryName=queryName
