@@ -28,7 +28,7 @@ var finishFlag=false;
 var helpFlag=true;
 var RcdingFlag=false;
 var counter=0;
-var inst = setInterval(change, 1000);
+// var inst = setInterval(change, 1000);
 
 
 
@@ -112,27 +112,7 @@ recognition.onerror = function(event) {
       App buttons and input
 ------------------------------*/
 
-//$('#start-record-btn').on('click', function(e) {
-//  noteTextarea.val('');
-//  noteContent = '';
-//  recognition.start();
-//  finishFlag=false;
-//  $('#save-note-btn').hide();
-//});
-//
-//
-//$('#pause-record-btn').on('click', function(e) {
-//  recognition.stop();
-//  if(!noteContent.length) {
-//        instructions.text('We could not hear from you. Please try again.');
-//     }
-//                          else{
-//                            instructions.text('Cong! You can go next.');
-//                            finishFlag=true;
-//                            $('#save-note-btn').show();
-//                            //show “go next”
-//                          }
-//});
+
 
 $('#speak').on('click',function(e){
      if (!RcdingFlag)//start recording
@@ -179,39 +159,38 @@ noteTextarea.on('input', function() {
 //                  help.toggle();
 //                  });
 
-$('#save-note-btn').on('click', function(e) {
-  recognition.stop();
-
-  if(!noteContent.length && !finishFlag) {
-    instructions.text('Only after you answer this question, you can go next. If you have spoken, press stop button to finish.');
-  }
-  else {
-
-    //go to the next page
-                       //window.location.href='/jsint';
-
-  }
-
-});
-
+// $('#save-note-btn').on('click', function(e) {
+//   recognition.stop();
+//
+//   if(!noteContent.length && !finishFlag) {
+//     instructions.text('Only after you answer this question, you can go next. If you have spoken, press stop button to finish.');
+//   }
+//   else {
+//
+//     //go to the next page
+//                        //window.location.href='/jsint';
+//
+//   }
+// });
 
 
 
-example.on('click',function(e){
-           $('#moreExample').show();
-           example.hide();
-           morehelp.hide();
-           });
 
-function change(){ //show up after 5 seconds
-    counter++;
-    if (counter>1) help.show();
-    if (counter>5){
-        morehelp.show();
-        example.show();
-        clearInterval(inst);
-    }
-};
+// example.on('click',function(e){
+//            $('#moreExample').show();
+//            example.hide();
+//            morehelp.hide();
+//            });
+//
+// function change(){ //show up after 5 seconds
+//     counter++;
+//     if (counter>1) help.show();
+//     if (counter>5){
+//         morehelp.show();
+//         example.show();
+//         clearInterval(inst);
+//     }
+// };
 
 $('#help-btn').mouseover(function(){
                          $('#help1').show();
@@ -307,6 +286,8 @@ function sendfiles(){
   request.open("POST","/receiveFile");
   request.send(formData);
 }
+
+
 
 //accept notes array and show them on the webpage
 function renderNotes(notes) {

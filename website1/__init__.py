@@ -61,4 +61,14 @@ def create_app():
     from website1.GameVersionFolder import receiveFile_ver_game
     app.register_blueprint(receiveFile_ver_game.bp)
 
+########## Easy Version ############
+    from website1.EasyVersionFolder import EasyContent
+    app.register_blueprint(EasyContent.bp)
+
+    from website1.EasyVersionFolder import EasyIntro
+    app.register_blueprint(EasyIntro.bp)
+
+    from website1.EasyVersionFolder import receiveFile_ver_Easy
+    app.register_blueprint(receiveFile_ver_Easy.bp)
+
     return app

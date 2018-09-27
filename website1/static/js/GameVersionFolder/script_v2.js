@@ -269,8 +269,6 @@ function afterEndRcd(){
     RcdingFlag=false;
     //$('#speak').html('Speak Again');
 
-
-
     // Save note to localStorage.
     // The key is the dateTime with seconds, the value is the content of the note.
     saveNote(new Date().toLocaleString(), noteContent);

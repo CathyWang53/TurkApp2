@@ -10,10 +10,15 @@ bp = Blueprint('game', __name__, url_prefix='/game/<int:pyint>')
 queries = [["A great movie for Friday night.","What movies do you think fit for Firday night?",
 "Can you recommend some movies for Friday night?"],
 ["Find me some movies similar to Titanic.","What would you recommend to a fan of Titanic?",
-"Movies like Titanic."],
-["Show me love stories with happy ending"],
-["Comedy","funny movies"],
-["Popular movies", "Movies that many people like"]]
+"Movies like Titanic.","Films similar to Titanic"],
+["Show me a movie with Harrison Ford", "Movies starred by Harrison Ford","show me all movies starring Harrison Ford"],
+["The Shawshank Redemption","I'd like to watch The Shawshank Redemption"],
+["Show me love stories with a happy ending"],
+["Comedy","Funny movies","Something funny","I'd like to watch a commedy"],
+["Popular movies", "Movies that many people like"],
+["Can you find me a funny romantic movie made in the 2000s?"],
+["Best movies right now"]
+]
 
 
 @bp.route('/', methods=('GET', 'POST'))
