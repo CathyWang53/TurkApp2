@@ -19,9 +19,10 @@ class Results(db.Model):
 
 class feedbacks(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    userid=db.Column(db.Text(),nullable=False)
+    userid=db.Column(db.Text(), nullable=False)
     feedback = db.Column(db.Text(), nullable=False)
     duration = db.Column(db.Integer, nullable=False)
+    version = db.Column(db.Text(), nullable=False)
 
     def __repr__(self):
         return '<feedbacks: {}>'.format(self.name)
@@ -32,16 +33,35 @@ class results_ver_game(db.Model):
     text = db.Column(db.Text(), nullable=False)
     mp3url = db.Column(db.Text(), nullable=False)
     queryname = db.Column(db.Text(), nullable=False)
-    answerTime = db.Column(db.Integer, nullable=False) 
+    answerTime = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):
         return '<results_ver_game: {}>'.format(self.name)
 
-class feedbacks_ver_game(db.Model):
+# class feedbacks_ver_game(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     userid=db.Column(db.Text(),nullable=False)
+#     feedback = db.Column(db.Text(), nullable=False)
+#     duration = db.Column(db.Integer, nullable=False)
+#
+#     def __repr__(self):
+#         return '<feedbacks_ver_game: {}>'.format(self.name)
+
+class results_ver_easy(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     userid=db.Column(db.Text(),nullable=False)
-    feedback = db.Column(db.Text(), nullable=False)
-    duration = db.Column(db.Integer, nullable=False)
+    text = db.Column(db.Text(), nullable=False)
+    mp3url = db.Column(db.Text(), nullable=False)
+    queryname = db.Column(db.Text(), nullable=False)
 
     def __repr__(self):
-        return '<feedbacks_ver_game: {}>'.format(self.name)
+        return '<results_ver_easy: {}>'.format(self.name)
+
+# class feedbacks_ver_easy(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     userid=db.Column(db.Text(),nullable=False)
+#     feedback = db.Column(db.Text(), nullable=False)
+#     duration = db.Column(db.Integer, nullable=False)
+#
+#     def __repr__(self):
+#         return '<feedbacks_ver_easy: {}>'.format(self.name)

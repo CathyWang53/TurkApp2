@@ -74,10 +74,12 @@
         else{
           var formData = new FormData();
 
-          var userID = Cookies.get('userID', userID);
+          var userID = Cookies.get('userID');
+          var version = Cookies.get('version');
           formData.append("feedback", feedback);
           formData.append("userID", userID);
-          formData.append("timer",Number(Cookies.get('timer')));
+          formData.append("version", version);
+          formData.append("timer", Number(Cookies.get('timer')));
           var request = new XMLHttpRequest();
           request.open("POST","/receiveFeedback");
           request.send(formData);

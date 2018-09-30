@@ -278,12 +278,18 @@ function afterEndRcd(){
 function sendfiles(){
   var formData = new FormData();
   userID = Cookies.get('userID');
+  var version = Cookies.get('version')
   formData.append("queryName", queryName);
   formData.append("text", noteContent);
   formData.append("Mp3url", Mp3url);
   formData.append("userID", userID);
   var request = new XMLHttpRequest();
-  request.open("POST","/receiveFile_ver_easy");
+  if (version == "easyVersion") request.open("POST","/receiveFile_ver_easy");
+  if (version == "gameVersion") {
+    formData.append("answerTime", 0);
+    request.open("POST","/receiveFile_ver_game");
+  }
+  if (version == "posterVersion") request.open("POST","/receiveFile");
   request.send(formData);
 }
 

@@ -10,6 +10,7 @@ from website1.models import results_ver_game
 @bp.route('', methods=('POST','GET'))
 def wlcm():
     if request.method == 'POST':
+        print("gameVersion")
         print("successfully add to database1")
         text = request.form['text']
         print(text)

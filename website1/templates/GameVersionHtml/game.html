@@ -132,6 +132,9 @@ $(function(){
     });
     if ({{htmlint}}==0) introguide.start();
 
+    if ({{htmlint}} < 8) $('#go-next-btn').attr("href","/game/{{htmlint+1}}");
+    else $('#go-next-btn').attr("href","/OpenQuestions/0");
+
   });
 
 </script>
@@ -151,6 +154,6 @@ $(function(){
     padding: 5px 5px;
 }
 </style>
-{% endblock %}
 
+{% endblock %}
 </html>

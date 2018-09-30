@@ -9,15 +9,15 @@ skipTime=0
 bp = Blueprint('easy', __name__, url_prefix='/easy/<int:pyint>')
 queries = [["comedy"],
 ["Brad Pitt"],
+["interesting characters"],
+["Titanic"],
 ["France"],
 ["2010s","➕","Superhero"],
 ["explosion"],
 ["popular"],
-["Titanic"],
-["interesting characters"],
 ["Best","➕",">2000"]
 ]
-helps = ["0","Brad Pitt is a famous film star","0"]
+#helps = ["0","Brad Pitt is a famous film star","0"]
 
 
 @bp.route('/', methods=('GET', 'POST'))
@@ -34,5 +34,5 @@ def game(pyint):
     return render_template('EasyVersionHtml/easy.html',
     htmlint=pyint,
     SkipTime=skipTime,
-    queryName=queryName
+    queryName=queryName,
     )

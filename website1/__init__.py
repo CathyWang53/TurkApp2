@@ -35,6 +35,9 @@ def create_app():
     from . import finish
     app.register_blueprint(finish.bp)
 
+    from . import OpenQuestions
+    app.register_blueprint(OpenQuestions.bp)
+
 ######## Poster Version ###########
     from website1.PosterVersionPy import welcome
     app.register_blueprint(welcome.bp)
@@ -45,8 +48,6 @@ def create_app():
     from website1.PosterVersionPy import tutorial
     app.register_blueprint(tutorial.bp)
 
-    from website1.PosterVersionPy import OpenQuestions
-    app.register_blueprint(OpenQuestions.bp)
 
     from website1.PosterVersionPy import receiveFile
     app.register_blueprint(receiveFile.bp)

@@ -12,11 +12,13 @@ from website1.models import feedbacks
 @bp.route('', methods=('POST','GET'))
 def wlcm():
     if request.method == 'POST':
+        print("feedback")
         print("successfully add to database1")
 
         userID=request.form['userID']
         feedback=request.form['feedback']
         timer=request.form['timer']
+        version=request.form['version']
         print(feedback)
         print(timer)
 
@@ -26,7 +28,7 @@ def wlcm():
         else:
             print("successfully add to database3")
             # db.session.add(ResultTable(answer=name))
-            db.session.add(feedbacks( userid = userID, feedback=feedback, duration=timer))
+            db.session.add(feedbacks( userid = userID, feedback=feedback, duration=timer, version=version))
             db.session.commit()
             print("successfully add to database4")
     return 'success'

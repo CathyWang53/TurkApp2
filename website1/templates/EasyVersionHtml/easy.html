@@ -5,15 +5,15 @@
 {% block movies %}
   </br>
 
-  <h4 id="keyWord"> Film key word: </h4>
+  <h4 id="keyWord"> Film keyword: </h4>
   <div class="form-inline">
     <ul id="keyWordTable">
       {% for query in queryName %}
       <li>{{query}}&nbsp&nbsp </li>
       {% endfor %}
     </ul>
-    <button id="help-btn2" title="Help">?</button>
-    <p id="help2"><font size="3" color="#008000">  &nbsp Imagine you are searching for this kind of movie. </font></p>
+    <!-- <button id="help-btn2" title="Help">?</button>
+    <p id="help2"><font size="3" color="#008000">  &nbsp Imagine you are searching for this kind of movie. </font></p> -->
   </div>
 
 
@@ -25,7 +25,7 @@
         <div class="help1" id="help1">
             <p>Instructions:</p>
             <p> Imagine you are finding movies through an intelligent assistant, such as Siri or Amazon Echo. </p>
-            <p> We have provided you with the film key words
+            <p> We have provided you with the film keywords
               and your quries should contain this information.</p>
             <p> It's okay if your answers do not include the exact words shown on the screen
               because speaking naturally is the most important.</p>
@@ -65,7 +65,7 @@ $(function(){
                                },
                                {
                                      element: '#keyWord',
-                                     intro: 'We have provided you with the film key words and your quries should contain this information.',
+                                     intro: 'We have provided you with the film keywords and your quries should contain this information.',
                                      position: 'bottom'
                                },
                                {
@@ -91,7 +91,7 @@ $(function(){
                                ]
     });
     if ({{htmlint}}==0) introguide.start();
-
+    $('#go-next-btn').attr("href","/game/{{htmlint+1}}");
   });
 
 

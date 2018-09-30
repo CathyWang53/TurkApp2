@@ -40,7 +40,7 @@
         </p> -->
         <p>
           In this survey, we will ask you to imagine you are asking for movie recommendations from an intelligent assistant.
-          We are going to provide you with some queries. And you should ask them in different ways using your microphone.
+          We are going to provide you with keywords. And you should contain this information into your queries.
         </div>
       </div>
 
@@ -92,11 +92,12 @@
         Cookies.set('userID', userID);
         console.log("cookie set");
         Cookies.set('timer', sec.toString());
-        window.location.href='/game/0/';
+        window.location.href='/easy/0/';
 
       });
 
       Cookies.set('randomInt', Math.floor(Math.random()*3+1));
+      Cookies.set('version', "easyVersion");
 
     });
     </script>
