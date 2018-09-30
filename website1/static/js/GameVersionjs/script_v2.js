@@ -37,7 +37,7 @@ $('#morehelp').hide();
 $('#example').hide();
 $('#moreExample').hide();
 help.hide();
-//$('#go-next-btn').hide();
+$('#go-next-btn').hide();
 $('#help1').hide();
 
 

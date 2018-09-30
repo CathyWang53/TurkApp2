@@ -78,6 +78,11 @@ $(function(){
                                      intro: 'It\'s okay if your answers do not include the exact word here because speaking naturally is the most important.',
                                      position: 'bottom'
                                },
+                               {
+                                     element: '#keyWordTable',
+                                     intro: 'For example, "comedy" can be replaced by "funny movies", as long as it is natural.',
+                                     position: 'bottom'
+                               },
                                // {
                                //       element: '#yours',
                                //       intro: 'Note that if your answers are too similar, you may not be able to get your payment.',
@@ -91,7 +96,8 @@ $(function(){
                                ]
     });
     if ({{htmlint}}==0) introguide.start();
-    $('#go-next-btn').attr("href","/game/{{htmlint+1}}");
+    if ({{htmlint}} < 8) $('#go-next-btn').attr("href","/easy/{{htmlint+1}}");
+    else $('#go-next-btn').attr("href","/OpenQuestions/0");
   });
 
 
