@@ -6,7 +6,7 @@ from random import choice
 pyint=0
 skipTime=0
 
-bp = Blueprint('easy', __name__, url_prefix='/easy/<int:pyint>')
+bp = Blueprint('easy', __name__, url_prefix='/easy/<int:pyint>/<int:skipTime>')
 queries = [["comedy"],
 ["Brad Pitt"],
 ["interesting characters"],
@@ -21,7 +21,7 @@ queries = [["comedy"],
 
 
 @bp.route('/', methods=('GET', 'POST'))
-def game(pyint):
+def game(pyint,skipTime):
     #return "This is the game version."
     # if request.method == 'POST':
     #     name = request.form['name']
@@ -29,7 +29,7 @@ def game(pyint):
     #     # redirect
     #     return redirect(url_for('tutorial.scene1', id=name, pyint=0, skipTime=0))
 
-    queryName=queries[pyint]
+    queryName=queries[pyint+skipTime]
 
     return render_template('EasyVersionHtml/easy.html',
     htmlint=pyint,

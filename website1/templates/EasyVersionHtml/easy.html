@@ -96,7 +96,10 @@ $(function(){
                                ]
     });
     if ({{htmlint}}==0) introguide.start();
-    if ({{htmlint}} < 8) $('#go-next-btn').attr("href","/easy/{{htmlint+1}}");
+    if ({{htmlint}} < 8) {
+      if ({{htmlint+SkipTime}}%2 == 0) $('#go-next-btn').attr("href","/easy/{{htmlint+1}}/{{SkipTime}}");
+      else $('#go-next-btn').attr("href","/easy/{{htmlint}}/{{SkipTime+1}}");
+    }
     else $('#go-next-btn').attr("href","/OpenQuestions/0");
   });
 

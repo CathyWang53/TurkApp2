@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+
+{% block headline %}
+<div class="row">
+  <!-- <div class="col-2">
+    <h2 id="headline1">Part: 1 / 3 </h2>
+  </div> -->
+  <p></p>
+</div>
+<div class="row" id="headline">
+  <div class="col-2">
+    <h4 id="headline2">Scenario: {{(SkipTime+htmlint)//2+1}} / 3 </h4>
+  </div>
+  <div class="col-10">
+    <h4 id="headline3">  First Query</h4>
+  </div>
+</div>
+{% endblock %}
+
+    {% block movies %}
+    {% if (htmlint+SkipTime) not in HidePosterIndex %}
+    <div class="row" id="instruction1">
+        <div class="col-8">
+            <!-- <h4>  You want movies like these:</h4> -->
+            <img id="wishList" height="40" width="40" src="/static/images/wish-list-icon3.png" />
+        </div>
+    </div>
+    <p></p>
+    <div class="row" id="movie-row-1">
+        <!--                    The 4 movies in the first row-->
+        {% for Count in range(0,4) %}
+        <div class="col-3" title="movie-row-1">
+            <div class="posters">
+                <!--poster ids start from 0-->
+                <img id={{"poster"+Movies1[Count][0]}} src={{"https://image.tmdb.org/t/p/w500" + Movies1[Count][5]}}  class="img-thumbnail" />
+                <div class="overlay">
+                    <div class="text">
+                        <p>Genres: {{Movies1[Count][2]}}</p>
+                        <p>Actors: {{Movies1[Count][3]}}</p>
+                        <p>Directors: {{Movies1[Count][4]}}</p>
+                        <p>Languages: {{Movies1[Count][8]}} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row" title="movieName">
+        {% for Count in range(0,4) %}
+        <div class="col-3">
+            <p id="name"+Movies1[Count][0]> {{Movies1[Count][1]}} </p>
+        </div>
+        {% endfor %}
+    </div>
+
+
+    {% if (htmlint+SkipTime) not in HideIndex %}
+    <div class="row">
+        <div class="col-12">
+            <!-- <h4>Rather than these:</h4> -->
+            <img id="dislikeList" height="40" width="40" src="/static/images/dislike-list-icon.png" />
+        </div>
+    </div>
+    <p></p>
+    <!--                The 4 movies in the second row-->
+    <div class="row" id="movie-row-2">
+        {% for Count in range(4,8) %}
+        <div class="col-3" title="movie-row-2">
+            <div class="posters">
+                <img id={{"poster"+Movies1[Count][0]}} src={{"https://image.tmdb.org/t/p/w500" + Movies1[Count][5]}} class="img-thumbnail" />
+                <div class="overlay">
+                    <div class="text">
+                        <p>Genres: {{Movies1[Count][2]}}</p>
+                        <p>Actors: {{Movies1[Count][3]}}</p>
+                        <p>Directors: {{Movies1[Count][4]}}</p>
+                        <p>Languages: {{Movies1[Count][8]}} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="row" title="movieName">
+        {% for Count in range(4,8) %}
+        <div class="col-3">
+            <p id="name"+Movies1[Count][0]> {{Movies1[Count][1]}} </p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if (htmlint+SkipTime) in ShowRow3Index %}
+    <div class="row">
+        <h2>Or these:</h2>
+    </div>
+    {% endif %}
+    <!--                The 4 movies in the third row-->
+    {% if (htmlint+SkipTime) in ShowRow3Index  %}
+    <div class="row">
+        {% for Count in range(8,12) %}
+        <div class="col-3" title="movie-row-1">
+            <img id={{"poster"+Movies1[Count][0]}} src={{"https://image.tmdb.org/t/p/w500" + Movies1[Count][5]}}  alt={{"poster of" + Movies1[Count][1]}} class="img-thumbnail" />
+            <p id="name"+Movies1[Count][0]> {{Movies1[Count][1]}} </p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% endif %}  <!-- hidePosterIndex -->
+
+    {% if (htmlint+SkipTime) in HidePosterIndex %}
+    <h5>keyword: Comedy </h5>
+    {% endif %}
+
+    {% endblock %}
+
+    {% block help %}
+            <div class="help1" id="help1">
+                <p>Instructions:</p>
+                <p id="imagine">Imagine that you are searching for the particular kind of movies shown here.</p>
+                <p>If you move your cursor over the picture, more information will appear.</p>
+                <p>To move to the next page, click speak button and ask for movies. Imagine that you are asking the question to an intelligent assistant such as Siri or Amazon Echo. Then click "next". It's good to speak naturally.</p>
+            </div>
+    {% endblock %}
+
+    {% block operation2 %}
+    <div class="row" id="operation">
+            <div class="col-12" align="right">
+              <!-- <font color="green"> ({{SkipTime+1}}/3) </font> -->
+              <!-- <a href="/0/{{htmlint}}/{{SkipTime-1}}" id="back-btn" class="button"> Back </a>
+              <a href="/0/{{htmlint}}/{{SkipTime+1}}" id="next-btn" class="button"> Next </a> -->
+              <button id="help-btn" title="Help" class="button">Help</button>
+            </div>
+    </div>
+    {% endblock %}
+
+
+
+
+    {% block myJS %}
+<script src="{{url_for('static',filename='js/PosterVersionjs/script_v2.js')}}"></script>
+<!--        tutorial-->
+         <script>
+             $(function(){
+               // if ({{SkipTime}}>=20) {
+               // $('#skip-btn').hide();
+               // $('#skip-inst').text("You have skipped for 10 times. So now you cannot skip again.")
+               // }
+               // else{
+               // $('#skip-btn').show();
+               // $('#skip-inst').text("SkipTime: {{SkipTime}} / 10")
+               // }
+                 var int1={{htmlint}};
+                 var int2={{SkipTime}};
+                 var partNum={{partNum}};
+
+                 $('#go-next-btn').html("Go next");
+                 $('#go-next-btn').attr("href","/follow_up/{{htmlint+1}}/0");
+
+                 if ((int1+int2)%2==1){
+                   $('#headline3').text("Follow-up Query")
+                   $('#go-next-btn').html("Go to next scenario");
+                   $('#recording-title').text("“I can improve these results. Tell me more about what you want.”");
+                 }
+
+
+               var introguide = introJs();
+
+               introguide.setOptions({
+                  steps: [
+                    {
+                      element: '#recording-title',
+                      intro: 'Imagine you are finding movies through an intelligent assistant, such as Siri or Amazon Echo.',
+                      position: 'bottom'
+                    },
+                    {
+                    element: '#headline',
+                    intro: 'Each scenario contains a first query and a follow-up query.',
+                    position: 'bottom'
+                    },
+                    {
+                          element: '#movie-row-1',
+                          intro: 'We have provided you with the film posters. For the first query, imagine you are finding a particular kind of movie characterized by the four posters.',
+                          position: 'bottom'
+                    },
+                    {
+                          element: '#speak',
+                          intro: 'Click this button to record your answers. It is good to imagine you are talking to an intelligent assistant and speak naturally. Click "Done" to close this box.',
+                          position: 'left'
+                    },
+
+
+
+                    ]
+                });
+
+               if ({{showIntro}} == 1 & {{SkipTime+htmlint}}==0) introguide.start();
+
+                if ({{SkipTime+htmlint}}==1){
+                    introguide.setOptions({
+                      steps: [
+                        {
+                          element: '#movie-row-2',
+                          intro: 'For the follow-up query, imagine the assistant has recommended these movies for you.',
+                          position: 'bottom'
+                        },
+                        {
+                          element: '#movie-row-1',
+                          intro: 'You are not satisfied with those results because they are still so different from what you want.',
+                          position: 'bottom'
+                        },
+                        {
+                          element: '#recording-title',
+                          intro: 'Provide more information for the intelligent assistant to improve the results.',
+                          position: 'bottom'
+                        },
+                        ]
+                       });
+                  if ({{showIntro}} == 1) introguide.start();
+                }
+
+
+               });
+        </script>
+    {% endblock %}
+</html>

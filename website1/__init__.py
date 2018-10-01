@@ -48,10 +48,11 @@ def create_app():
     from website1.PosterVersionPy import tutorial
     app.register_blueprint(tutorial.bp)
 
-
     from website1.PosterVersionPy import receiveFile
     app.register_blueprint(receiveFile.bp)
 
+    from website1.PosterVersionPy import follow_up
+    app.register_blueprint(follow_up.bp)
 
 ########## Game Version ############
     from website1.GameVersionPy import game
