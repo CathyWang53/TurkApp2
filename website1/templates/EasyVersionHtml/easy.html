@@ -26,11 +26,10 @@
             <p>Instructions:</p>
             <p> Imagine you are finding movies through an intelligent assistant, such as Siri or Amazon Echo. </p>
             <p> We have provided you with the film keywords
-              and your quries should contain this information.</p>
-            <p> It's okay if your answers do not include the exact words shown on the screen
+              and your quries should contain this information.
+              It's okay if your answers do not include the exact words shown on the screen
               because speaking naturally is the most important.</p>
-            <p>Click "Speak" button to record your answers.
-            <p>It is good to imagine you are talking to an intelligent assistant and speak naturally.</p>
+            <p>Click "Speak" button to record your answers. It is good to imagine you are talking to an intelligent assistant and speak naturally.</p>
             <!-- <p>If your answers are too similar, you may not be able to get your payment.</p> -->
             <p></p>
         </div>
@@ -95,8 +94,8 @@ $(function(){
                                },
                                ]
     });
-    if ({{htmlint}}==0) introguide.start();
-    if ({{htmlint}} < 8) {
+    if ({{htmlint+SkipTime}}==0) introguide.start();
+    if ({{htmlint+SkipTime}} < 8) {
       if ({{htmlint+SkipTime}}%2 == 0) $('#go-next-btn').attr("href","/easy/{{htmlint+1}}/{{SkipTime}}");
       else $('#go-next-btn').attr("href","/easy/{{htmlint}}/{{SkipTime+1}}");
     }
@@ -110,9 +109,9 @@ $(function(){
 <style type="text/css">
 .help1 {
     position: relative;
-    bottom: 400px;
-    left: 640px;
-    width: 45%;
+    bottom: 310px;
+    left: 420px;
+    width: 75%;
     height: 100%;
     z-index:1;
     background-color: #000000;

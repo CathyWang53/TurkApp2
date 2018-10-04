@@ -283,8 +283,8 @@ function afterEndRcd(){
 
 function sendfiles(){
   var formData = new FormData();
-  //userID = Cookies.get('userID');
-  userID='cat';
+  userID = Cookies.get('userID');
+  //userID='cat';
   formData.append("queryName", queryName);
   formData.append("text", noteContent);
   formData.append("Mp3url", Mp3url);
