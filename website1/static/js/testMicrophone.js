@@ -40,6 +40,7 @@ $('#moreExample').hide();
 help.hide();
 $('#go-next-btn').hide();
 $('#help1').hide();
+$('#help-btn').hide();
 
 
 
@@ -87,6 +88,7 @@ recognition.onresult = function(event) {
 };
 
 recognition.onstart = function() {
+  instructions.show();
   instructions.text('Voice recognition activated. Try speaking into the microphone.');
 }
 
@@ -136,7 +138,7 @@ $('#speak').on('click',function(e){
           //afterEndRcd();
               recognition.stop();
               $('#speak').hide();
-
+              instructions.show();
               instructions.text('Recognizing...Please wait for 2 second');
               //stopRecording();
               stopRecordingMp3();
