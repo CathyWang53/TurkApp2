@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+
+{% block headline %}
+  <div class="row">
+    <div class="col-5">
+      <h2 id="headline">Test Your Microphone </h2>
+    </div>
+  </div>
+{% endblock %}
+
+{% block movies %}
+<p> 1. Click "Speak" button.</p>
+<p> 2. Click 'allow' if you see a question in the browser. </p>
+<p> 3. Say something to your microphone.</p>
+<p> 4. Click "Stop" button after you finish speaking, then your voice and texts will be shown below.</p>
+<p> 5. If you passed this test, click the "next" button that appears.</p>
+<p> 6. If your voice always cannot be recognized, you do not meet the requirement of this HIT. Please abandon the HIT, and we apologize for the inconvenience. </p>
+<!-- <p> Please make sure that:</p>
+<li> You are using the leatest Chrome browser </li>
+<li> You have granted permission to the microphone </li>
+<li> Your microphone works and is well connected</li> -->
+{%endblock%}
+
+  {% block test %}
+
+        <div class="testPart">
+         <h3> My Recordings</h3>
+         <body style="padding-top: 30px">
+           <input id="note-textarea" type="text" class="form-control"
+           placeholder="Your words will be shown here" rows="5"
+           name="name" required>
+             <div class="container">
+                 <div class="row">
+                     <div class="col-sm-8 col-sm-offset-2 text-center">
+                         <div>
+                             <h3 class="text-center" id="timer"></h3>
+                         </div>
+
+                         <ol class="convertedList"></ol>
+
+                     </div>
+                 </div>
+             </div>
+        <ol id="recordingsList"></ol>
+      </div>
+  {% endblock %}
+
+  {% block myJS %}
+  <script src="{{url_for('static',filename='js/testMicrophone.js')}}"></script>
+  <script>
+
+    $('#recording-instructions').hide();
+    $('#recording-title').text('Say something to test your microphone. ');
+    var version = Cookies.get('version');
+    if (version == "easyVersion") $('#go-next-btn').attr("href","/./easy/0/0");
+    if (version == "gameVersion") $('#go-next-btn').attr("href","/./game/0/0");
+    if (version == "posterVersion") $('#go-next-btn').attr("href","/./tutorial/0/0");
+  </script>
+  {% endblock %}
+
+</html>

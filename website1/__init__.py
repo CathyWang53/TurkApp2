@@ -38,6 +38,9 @@ def create_app():
     from . import OpenQuestions
     app.register_blueprint(OpenQuestions.bp)
 
+    from . import testMicrophone
+    app.register_blueprint(testMicrophone.bp)
+
 ######## Poster Version ###########
     from website1.PosterVersionPy import welcome
     app.register_blueprint(welcome.bp)
