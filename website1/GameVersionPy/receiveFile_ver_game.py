@@ -33,8 +33,8 @@ def wlcm():
             print("successfully add to database3")
             # db.session.add(ResultTable(answer=name))
             db.session.add(results_ver_game( userid = userID, text=text,
-            mp3url= Mp3url, queryname=queryName,answerTime=answerTime,
-            datetime=timeStamp, category = category))
+            mp3url= Mp3url, queryname=queryName,answertime2=answerTime,
+            answerTime=answerTime,datetime=timeStamp, category = category))
             db.session.commit()
             print("successfully add to database4")
     return 'success'

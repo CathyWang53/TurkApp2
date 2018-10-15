@@ -35,6 +35,7 @@ class results_ver_game(db.Model):
     mp3url = db.Column(db.Text(), nullable=False)
     queryname = db.Column(db.Text(), nullable=False)
     answerTime = db.Column(db.Integer, nullable=False)
+    answertime2 = db.Column(db.Integer)
     datetime = db.Column(db.Text())
     category = db.Column(db.Text())
 
