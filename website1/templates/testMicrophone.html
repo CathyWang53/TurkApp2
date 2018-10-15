@@ -51,10 +51,11 @@
 
     $('#recording-instructions').hide();
     $('#recording-title').text('Say something to test your microphone. ');
-    var version = Cookies.get('version');
-    if (version == "easyVersion") $('#go-next-btn').attr("href","/./easy/0/0");
-    if (version == "gameVersion") $('#go-next-btn').attr("href","/./game/0/0");
-    if (version == "posterVersion") $('#go-next-btn').attr("href","/./tutorial/0/0");
+    $('#go-next-btn').attr("href","/./OpenQuestions/0");
+    // var version = Cookies.get('version');
+    // if (version == "easyVersion") $('#go-next-btn').attr("href","/./easy/0/0");
+    // if (version == "gameVersion") $('#go-next-btn').attr("href","/./game/0/0");
+    // if (version == "posterVersion") $('#go-next-btn').attr("href","/./tutorial/0/0");
   </script>
   {% endblock %}
 

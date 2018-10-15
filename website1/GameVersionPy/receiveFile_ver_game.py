@@ -1,6 +1,7 @@
 from flask import (
     Blueprint, render_template, request, flash
 )
+import time
 
 bp = Blueprint('receiveFile_ver_game', __name__, url_prefix='/receiveFile_ver_game')
 
@@ -22,14 +23,18 @@ def wlcm():
         userID=request.form['userID']
         print(userID)
         answerTime=request.form['answerTime']
-
+        timeStamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        print(timeStamp)
+        category = request.cookies.get('category')
         if not Mp3url:
             print("successfully add to database2")
             flash('result is required.')
         else:
             print("successfully add to database3")
             # db.session.add(ResultTable(answer=name))
-            db.session.add(results_ver_game( userid = userID, text=text, mp3url= Mp3url, queryname=queryName,answerTime=answerTime))
+            db.session.add(results_ver_game( userid = userID, text=text,
+            mp3url= Mp3url, queryname=queryName,answerTime=answerTime,
+            datetime=timeStamp, category = category))
             db.session.commit()
             print("successfully add to database4")
     return 'success'

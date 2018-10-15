@@ -74,8 +74,12 @@
                $('#leftInstruction').html("<h4> Give us another example of what you would say. </p4>")
                if (questionNum == 2){ //last page
                  $('#leftInstruction').html("<h4> Give us one last example of what you would say. </p4>")
-                 $('#go-next-btn').html("Finish");
-                 $('#go-next-btn').attr("href","/finish");
+                 // $('#go-next-btn').html("Finish");
+                 // $('#go-next-btn').attr("href","/finish");
+                 var version = Cookies.get('version');
+                 if (version == "easyVersion") $('#go-next-btn').attr("href","/./easy/0/0");
+                 if (version == "gameVersion") $('#go-next-btn').attr("href","/./game/0/0");
+                 if (version == "posterVersion") $('#go-next-btn').attr("href","/./tutorial/0/0");
                }
                else{
                   $('#go-next-btn').html("Go to next scenario");

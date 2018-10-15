@@ -3,6 +3,7 @@ from website1 import db
 class ResultTable(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     answer = db.Column(db.Text(), nullable=False)
+    extend_existing=True
 
     def __repr__(self):
         return '<ResultTable: {}>'.format(self.name)
@@ -34,6 +35,8 @@ class results_ver_game(db.Model):
     mp3url = db.Column(db.Text(), nullable=False)
     queryname = db.Column(db.Text(), nullable=False)
     answerTime = db.Column(db.Integer, nullable=False)
+    datetime = db.Column(db.Text())
+    category = db.Column(db.Text())
 
     def __repr__(self):
         return '<results_ver_game: {}>'.format(self.name)

@@ -1,0 +1,529 @@
+version,queryname,category,quality
+easyVer,2010s  Superhero,"genre, time, combination",0
+easyVer,2010s  Superhero,"genre, time, combination",2
+easyVer,2010s  Superhero,"genre, time, combination",2
+easyVer,2010s  Superhero,"genre, time, combination",1
+easyVer,2010s  Superhero,"genre, time, combination",1
+easyVer,2010s  Superhero,"genre, time, combination",1
+easyVer,2010s  Superhero,"genre, time, combination",2
+easyVer,2010s  Superhero,"genre, time, combination",2
+easyVer,2010s  Superhero,"genre, time, combination",2
+easyVer,2010s  Superhero,"genre, time, combination",2
+easyVer,Best  gt2000,"quality, time, combination",2
+easyVer,Best  gt2000,"quality, time, combination",1
+easyVer,Best  gt2000,"quality, time, combination",2
+easyVer,Best  gt2000,"quality, time, combination",0
+easyVer,Best  gt2000,"quality, time, combination",2
+easyVer,Best  gt2000,"quality, time, combination",1
+easyVer,Best  gt2000,"quality, time, combination",1
+easyVer,Best  gt2000,"quality, time, combination",2
+easyVer,Best  gt2000,"quality, time, combination",2
+easyVer,Best  gt2000,"quality, time, combination",2
+easyVer,Brad Pitt,Actor,2
+easyVer,Brad Pitt,Actor,2
+easyVer,Brad Pitt,Actor,2
+easyVer,Brad Pitt,Actor,2
+easyVer,Brad Pitt,Actor,2
+easyVer,Brad Pitt,Actor,2
+easyVer,Brad Pitt,Actor,2
+easyVer,Brad Pitt,Actor,2
+easyVer,Brad Pitt,Actor,2
+easyVer,Brad Pitt,Actor,0
+easyVer,comedy,genre,2
+easyVer,comedy,genre,2
+easyVer,comedy,genre,2
+easyVer,comedy,genre,2
+easyVer,comedy,genre,1
+easyVer,comedy,genre,2
+easyVer,comedy,genre,2
+easyVer,comedy,genre,1
+easyVer,comedy,genre,2
+easyVer,comedy,genre,2
+easyVer,comedy,genre,2
+easyVer,comedy,genre,2
+easyVer,comedy,genre,2
+easyVer,explosion,deep feature,2
+easyVer,explosion,deep feature,2
+easyVer,explosion,deep feature,2
+easyVer,explosion,deep feature,2
+easyVer,explosion,deep feature,2
+easyVer,explosion,deep feature,1
+easyVer,explosion,deep feature,2
+easyVer,explosion,deep feature,2
+easyVer,explosion,deep feature,2
+easyVer,explosion,deep feature,2
+easyVer,France,region,2
+easyVer,France,region,2
+easyVer,France,region,1
+easyVer,France,region,2
+easyVer,France,region,2
+easyVer,France,region,2
+easyVer,France,region,2
+easyVer,France,region,2
+easyVer,France,region,1
+easyVer,France,region,2
+easyVer,interesting characters,deep feature,2
+easyVer,interesting characters,deep feature,2
+easyVer,interesting characters,deep feature,2
+easyVer,interesting characters,deep feature,2
+easyVer,interesting characters,deep feature,2
+easyVer,interesting characters,deep feature,1
+easyVer,interesting characters,deep feature,2
+easyVer,interesting characters,deep feature,2
+easyVer,interesting characters,deep feature,2
+easyVer,interesting characters,deep feature,2
+easyVer,popular,quality,1
+easyVer,popular,quality,2
+easyVer,popular,quality,2
+easyVer,popular,quality,2
+easyVer,popular,quality,2
+easyVer,popular,quality,2
+easyVer,popular,quality,2
+easyVer,popular,quality,2
+easyVer,popular,quality,2
+easyVer,popular,quality,2
+easyVer,Titanic,Name,2
+easyVer,Titanic,Name,2
+easyVer,Titanic,Name,2
+easyVer,Titanic,Name,2
+easyVer,Titanic,Name,2
+easyVer,Titanic,Name,1
+easyVer,Titanic,Name,2
+easyVer,Titanic,Name,2
+easyVer,Titanic,Name,2
+easyVer,Titanic,Name,2
+gameVer,A great movie for Friday night.,scene,1
+gameVer,A great movie for Friday night.,scene,1
+gameVer,A great movie for Friday night.,scene,2
+gameVer,A great movie for Friday night.,scene,0
+gameVer,A great movie for Friday night.,scene,0
+gameVer,A great movie for Friday night.,scene,0
+gameVer,A great movie for Friday night.,scene,2
+gameVer,A great movie for Friday night.,scene,2
+gameVer,A great movie for Friday night.,scene,2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",1
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",0
+gameVer,Best movies right now,"quality, time, combination",1
+gameVer,Best movies right now,"quality, time, combination",0
+gameVer,Best movies right now,"quality, time, combination",1
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",1
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",0
+gameVer,Best movies right now,"quality, time, combination",1
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",1
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Best movies right now,"quality, time, combination",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",0
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",0
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",0
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",1
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",0
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",0
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",1
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",1
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",0
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",1
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",1
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you find me a funny romantic movie made in the 2000s?,"genre, time",2
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,1
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,1
+gameVer,Can you recommend some movies for Friday night?,scene,0
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,1
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,1
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,1
+gameVer,Can you recommend some movies for Friday night?,scene,0
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,0
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,0
+gameVer,Can you recommend some movies for Friday night?,scene,2
+gameVer,Can you recommend some movies for Friday night?,scene,1
+gameVer,Comedy,genre,2
+gameVer,Comedy,genre,0
+gameVer,Comedy,genre,2
+gameVer,Comedy,genre,2
+gameVer,Comedy,genre,2
+gameVer,Comedy,genre,2
+gameVer,Films similar to Titanic,movie based,0
+gameVer,Films similar to Titanic,movie based,0
+gameVer,Films similar to Titanic,movie based,0
+gameVer,Films similar to Titanic,movie based,2
+gameVer,Films similar to Titanic,movie based,2
+gameVer,Films similar to Titanic,movie based,2
+gameVer,Films similar to Titanic,movie based,2
+gameVer,Films similar to Titanic,movie based,2
+gameVer,Films similar to Titanic,movie based,2
+gameVer,Find me some movies similar to Titanic.,movie based,1
+gameVer,Find me some movies similar to Titanic.,movie based,1
+gameVer,Find me some movies similar to Titanic.,movie based,1
+gameVer,Find me some movies similar to Titanic.,movie based,2
+gameVer,Find me some movies similar to Titanic.,movie based,2
+gameVer,Find me some movies similar to Titanic.,movie based,2
+gameVer,Funny movies,genre,2
+gameVer,Funny movies,genre,2
+gameVer,Funny movies,genre,2
+gameVer,I&#39;d like to watch a commedy,genre,2
+gameVer,I&#39;d like to watch a commedy,genre,1
+gameVer,I&#39;d like to watch a commedy,genre,1
+gameVer,I&#39;d like to watch a commedy,genre,0
+gameVer,I&#39;d like to watch a commedy,genre,2
+gameVer,I&#39;d like to watch a commedy,genre,2
+gameVer,I&#39;d like to watch a commedy,genre,2
+gameVer,I&#39;d like to watch a commedy,genre,0
+gameVer,I&#39;d like to watch a commedy,genre,2
+gameVer,I&#39;d like to watch a commedy,genre,2
+gameVer,I&#39;d like to watch a commedy,genre,2
+gameVer,I&#39;d like to watch a commedy,genre,2
+gameVer,I&#39;d like to watch a commedy,genre,2
+gameVer,I&#39;d like to watch a commedy,genre,2
+gameVer,I&#39;d like to watch a commedy,genre,2
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,2
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,0
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,0
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,2
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,2
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,2
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,0
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,0
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,0
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,2
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,2
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,2
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,2
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,2
+gameVer,I&#39;d like to watch The Shawshank Redemption,name,2
+gameVer,Movies like Titanic.,movie based,2
+gameVer,Movies like Titanic.,movie based,2
+gameVer,Movies like Titanic.,movie based,2
+gameVer,Movies like Titanic.,movie based,0
+gameVer,Movies like Titanic.,movie based,0
+gameVer,Movies like Titanic.,movie based,0
+gameVer,Movies like Titanic.,movie based,2
+gameVer,Movies like Titanic.,movie based,2
+gameVer,Movies like Titanic.,movie based,2
+gameVer,Movies like Titanic.,movie based,0
+gameVer,Movies like Titanic.,movie based,0
+gameVer,Movies like Titanic.,movie based,0
+gameVer,Movies starred by Harrison Ford,actor,1
+gameVer,Movies starred by Harrison Ford,actor,2
+gameVer,Movies starred by Harrison Ford,actor,1
+gameVer,Movies starred by Harrison Ford,actor,2
+gameVer,Movies starred by Harrison Ford,actor,2
+gameVer,Movies starred by Harrison Ford,actor,2
+gameVer,Movies starred by Harrison Ford,actor,2
+gameVer,Movies starred by Harrison Ford,actor,0
+gameVer,Movies starred by Harrison Ford,actor,0
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,0
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,1
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,0
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,1
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Movies that many people like,quality,2
+gameVer,Popular movies,quality,1
+gameVer,Popular movies,quality,1
+gameVer,Popular movies,quality,1
+gameVer,Popular movies,quality,2
+gameVer,Popular movies,quality,2
+gameVer,Popular movies,quality,2
+gameVer,Show me a movie with Harrison Ford,actor,2
+gameVer,Show me a movie with Harrison Ford,actor,2
+gameVer,Show me a movie with Harrison Ford,actor,2
+gameVer,Show me a movie with Harrison Ford,actor,0
+gameVer,Show me a movie with Harrison Ford,actor,0
+gameVer,Show me a movie with Harrison Ford,actor,0
+gameVer,Show me a movie with Harrison Ford,actor,1
+gameVer,Show me a movie with Harrison Ford,actor,1
+gameVer,Show me a movie with Harrison Ford,actor,1
+gameVer,Show me a movie with Harrison Ford,actor,2
+gameVer,Show me a movie with Harrison Ford,actor,2
+gameVer,Show me a movie with Harrison Ford,actor,2
+gameVer,show me all movies starring Harrison Ford,actor,1
+gameVer,show me all movies starring Harrison Ford,actor,1
+gameVer,show me all movies starring Harrison Ford,actor,1
+gameVer,show me all movies starring Harrison Ford,actor,2
+gameVer,show me all movies starring Harrison Ford,actor,2
+gameVer,show me all movies starring Harrison Ford,actor,2
+gameVer,show me all movies starring Harrison Ford,actor,2
+gameVer,show me all movies starring Harrison Ford,actor,2
+gameVer,show me all movies starring Harrison Ford,actor,2
+gameVer,show me all movies starring Harrison Ford,actor,2
+gameVer,show me all movies starring Harrison Ford,actor,2
+gameVer,show me all movies starring Harrison Ford,actor,2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",1
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",0
+gameVer,Show me love stories with a happy ending,"genre, deep feature",0
+gameVer,Show me love stories with a happy ending,"genre, deep feature",0
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",1
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",0
+gameVer,Show me love stories with a happy ending,"genre, deep feature",0
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",0
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Show me love stories with a happy ending,"genre, deep feature",2
+gameVer,Something funny,genre,2
+gameVer,Something funny,genre,2
+gameVer,Something funny,genre,2
+gameVer,Something funny,genre,1
+gameVer,Something funny,genre,1
+gameVer,Something funny,genre,1
+gameVer,The Shawshank Redemption,name,0
+gameVer,The Shawshank Redemption,name,1
+gameVer,The Shawshank Redemption,name,0
+gameVer,The Shawshank Redemption,name,2
+gameVer,The Shawshank Redemption,name,2
+gameVer,The Shawshank Redemption,name,2
+gameVer,The Shawshank Redemption,name,0
+gameVer,The Shawshank Redemption,name,0
+gameVer,The Shawshank Redemption,name,0
+gameVer,The Shawshank Redemption,name,0
+gameVer,The Shawshank Redemption,name,2
+gameVer,The Shawshank Redemption,name,2
+gameVer,The Shawshank Redemption,name,2
+gameVer,The Shawshank Redemption,name,2
+gameVer,The Shawshank Redemption,name,2
+gameVer,What movies do you think fit for Firday night?,scene,0
+gameVer,What movies do you think fit for Firday night?,scene,0
+gameVer,What movies do you think fit for Firday night?,scene,0
+gameVer,What movies do you think fit for Firday night?,scene,2
+gameVer,What movies do you think fit for Firday night?,scene,2
+gameVer,What movies do you think fit for Firday night?,scene,2
+gameVer,What would you recommend to a fan of Titanic?,movie based,2
+gameVer,What would you recommend to a fan of Titanic?,movie based,2
+gameVer,What would you recommend to a fan of Titanic?,movie based,2
+gameVer,What would you recommend to a fan of Titanic?,movie based,2
+gameVer,What would you recommend to a fan of Titanic?,movie based,2
+gameVer,What would you recommend to a fan of Titanic?,movie based,2
+posterVer,movie2018Horror&amp;Others1,"genre, time",0
+posterVer,movie2018Horror&amp;Others1,"genre, time",0
+posterVer,movie2018Horror&amp;Others1,"genre, time",2
+posterVer,movie2018Horror&amp;Others1,"genre, time",2
+posterVer,movie2018Horror&amp;Others1,"genre, time",2
+posterVer,movie2018Horror&amp;Others1,"genre, time",0
+posterVer,movie2018Horror&amp;Others1,"genre, time",0
+posterVer,movie2018Horror&amp;Others1,"genre, time",0
+posterVer,movie2018Horror&amp;Others1,"genre, time",2
+posterVer,movie2018Horror&amp;Others1,"genre, time",1
+posterVer,movie2018Horror&amp;Others1,"genre, time",0
+posterVer,movie2018Horror&amp;Others1,"genre, time",0
+posterVer,movie2018Horror&amp;Others1,"genre, time",0
+posterVer,movie2018Horror&amp;Others1,"genre, time",2
+posterVer,movie2018Horror&amp;Others1,"genre, time",2
+posterVer,movie2018Horror&amp;Others1,"genre, time",0
+posterVer,movie2018Horror&amp;Others1,"genre, time",0
+posterVer,movieAlfred Hitchcock,director,0
+posterVer,movieAlfred Hitchcock,director,0
+posterVer,movieAlfred Hitchcock,director,0
+posterVer,movieAlfred Hitchcock,director,0
+posterVer,movieAlfred Hitchcock,director,0
+posterVer,movieAlfred Hitchcock,director,0
+posterVer,movieAlfred Hitchcock,director,0
+posterVer,movieChina,region,0
+posterVer,movieChina,region,0
+posterVer,movieChina,region,2
+posterVer,movieChina,region,1
+posterVer,movieChina,region,0
+posterVer,movieChina,region,0
+posterVer,movieChina,region,0
+posterVer,movieChina,region,2
+posterVer,movieChina,region,0
+posterVer,movieChina,region,0
+posterVer,movieComedy,genre,0
+posterVer,movieComedy,genre,0
+posterVer,movieComedy,genre,0
+posterVer,movieDisney,genre,2
+posterVer,movieDisney,genre,0
+posterVer,movieDisney,genre,2
+posterVer,movieDisney,genre,2
+posterVer,movieDisney,genre,2
+posterVer,movieDisney,genre,0
+posterVer,movieDisney,genre,0
+posterVer,movieDisney,genre,2
+posterVer,movieDisney,genre,2
+posterVer,movieDisney,genre,0
+posterVer,movieFemale,deep feature,0
+posterVer,movieFemale,deep feature,0
+posterVer,movieFemale,deep feature,0
+posterVer,movieFemale,deep feature,0
+posterVer,movieFemale,deep feature,0
+posterVer,movieHepburn,actor,0
+posterVer,movieHepburn,actor,2
+posterVer,movieHepburn,actor,0
+posterVer,movieHepburn,actor,0
+posterVer,movieHepburn,actor,0
+posterVer,movieIndia,region,2
+posterVer,movieIndia,region,1
+posterVer,movieIndia,region,0
+posterVer,movieIndia,region,0
+posterVer,movieIndia,region,2
+posterVer,movieIndia,region,0
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJapanAnime&amp;Others,"genre, region",2
+posterVer,movieJapanAnime&amp;Others,"genre, region",2
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJapanAnime&amp;Others,"genre, region",2
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJapanAnime&amp;Others,"genre, region",2
+posterVer,movieJapanAnime&amp;Others,"genre, region",2
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJapanAnime&amp;Others,"genre, region",0
+posterVer,movieJennifer Lawrence,actor,0
+posterVer,movieJennifer Lawrence,actor,2
+posterVer,movieJennifer Lawrence,actor,2
+posterVer,movieJennifer Lawrence,actor,0
+posterVer,movieJennifer Lawrence,actor,0
+posterVer,movieJennifer Lawrence,actor,0
+posterVer,movieJennifer Lawrence,actor,2
+posterVer,movieJennifer Lawrence,actor,0
+posterVer,movieJennifer Lawrence,actor,0
+posterVer,movieLeonardo DiCaprio,actor,0
+posterVer,movieLeonardo DiCaprio,actor,0
+posterVer,movieLeonardo DiCaprio,actor,0
+posterVer,movieLeonardo DiCaprio,actor,2
+posterVer,movieLeonardo DiCaprio,actor,0
+posterVer,movieLeonardo DiCaprio,actor,2
+posterVer,movieLeonardo DiCaprio,actor,0
+posterVer,movieLeonardo DiCaprio,actor,2
+posterVer,movieLeonardo DiCaprio,actor,0
+posterVer,movieMexico,region,0
+posterVer,movieMexico,region,0
+posterVer,movieMexico,region,0
+posterVer,movieMexico,region,0
+posterVer,movieMiyazaki,director,0
+posterVer,movieMiyazaki,director,2
+posterVer,movieMiyazaki,director,2
+posterVer,movieMiyazaki,director,0
+posterVer,movieMiyazaki,director,0
+posterVer,movieMiyazaki,director,0
+posterVer,movieMiyazaki,director,0
+posterVer,movieMiyazaki,director,0
+posterVer,movieOld,time,2
+posterVer,movieOld,time,2
+posterVer,movieOld,time,2
+posterVer,movieOld,time,2
+posterVer,movieOld,time,0
+posterVer,movieOld,time,2
+posterVer,movieOld,time,2
+posterVer,movieOld,time,0
+posterVer,movieOld,time,0
+posterVer,movieOld,time,0
+posterVer,movieOld,time,0
+posterVer,movieOld,time,2
+posterVer,movieOld,time,2
+posterVer,movieOld,time,0
+posterVer,movieOld,time,0
+posterVer,movieOld,time,2
+posterVer,movieRobot,deep feature,0
+posterVer,movieRobot,deep feature,0
+posterVer,movieRobot,deep feature,0
+posterVer,movieRobot,deep feature,0
+posterVer,movieRobot,deep feature,0
+posterVer,movieRobot,deep feature,0
+posterVer,movieRobot,deep feature,0
+posterVer,movieRomance,genre,0
+posterVer,movieRomance,genre,2
+posterVer,movieRomance,genre,0
+posterVer,movieRomance,genre,0
+posterVer,movieRomance,genre,0
+posterVer,movieRomance,genre,0
+posterVer,movieRomance,genre,0
+posterVer,movieShark,deep feature,0
+posterVer,movieShark,deep feature,2
+posterVer,movieShark,deep feature,2
+posterVer,movieShark,deep feature,2
+posterVer,movieShark,deep feature,0
+posterVer,movieShark,deep feature,0
+posterVer,movieShark,deep feature,2
+posterVer,movieWes,director,0
+posterVer,movieWes,director,0
+posterVer,movieWes,director,0
+posterVer,movieWes,director,0
+posterVer,movieWes,director,0
+posterVer,movieWes,director,0
