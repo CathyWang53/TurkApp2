@@ -124,14 +124,14 @@ $(function(){
 
     introguide.setOptions({
                              steps: [
-                               {
-                                     element: '#recording-title',
-                                     intro: 'In this part, imagine you are finding a particular kind of movies through an intelligent assistant, such as Siri or Amazon Echo.',
-                                     position: 'bottom'
-                               },
+                               // {
+                               //       element: '#recording-title',
+                               //       intro: 'In this part, imagine you are finding a particular kind of movies through an intelligent assistant, such as Siri or Amazon Echo.',
+                               //       position: 'bottom'
+                               // },
                                {
                                      element: '#keyword',
-                                     intro: 'We have provided you with the film keywords and your quries should contain this information.',
+                                     intro: 'In this part, We have provided you with the film keywords and your queries should contain this information.',
                                      position: 'bottom'
                                },
                                {
@@ -141,7 +141,7 @@ $(function(){
                                },
                                {
                                      element: '#keyWordTable',
-                                     intro: 'It\'s okay if your answers do not include the exact word here because speaking naturally is the most important.',
+                                     intro: 'It\'s okay if your answers do not include the exact word here because speaking naturally is the most important thing.',
                                      position: 'bottom'
                                },
                                // {
@@ -166,7 +166,7 @@ $(function(){
                                // },
                                {
                                      element: '#speak',
-                                     intro: 'Record one query at a time. You have to record for 3 times in order to go next. Click "Done" to close this box.',
+                                     intro: 'Record one query at a time. You have to record three times in order to go to the next step. Click "Done" to close this box.',
                                      position: 'left'
                                },
                                ]
@@ -176,11 +176,11 @@ $(function(){
     // if ({{htmlint}} < 8) $('#go-next-btn').attr("href","/game/{{htmlint+1}}");
     // else $('#go-next-btn').attr("href","/OpenQuestions/0");
 
-    if ({{htmlint+SkipTime}} < 8) {
+    if ({{htmlint+SkipTime}} < 12) {
       if ({{htmlint+SkipTime}}%2 == 0) $('#go-next-btn').attr("href","/game/{{htmlint+1}}/{{SkipTime}}");
       else $('#go-next-btn').attr("href","/game/{{htmlint}}/{{SkipTime+1}}");
     }
-    else $('#go-next-btn').attr("href","/OpenQuestions/0");
+    else $('#go-next-btn').attr("href","/finish");
 
   });
 

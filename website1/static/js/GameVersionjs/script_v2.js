@@ -241,7 +241,7 @@ function afterEndRcd(){
     if (answerTime >= 2){
       $('#recording-title').hide();
       $('#operation').hide();
-     instructions.text('You can go next.');
+     instructions.text('');
      finishFlag=true;
      //$('#save-note-btn').show();
      $('#go-next-btn').show();

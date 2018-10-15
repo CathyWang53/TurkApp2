@@ -22,7 +22,7 @@
     {% block movies %}
     <div class="row" id="instruction1">
         <div class="col-10">
-            <h4 id="leftInstruction">  Imagine you want to watch a movie now. And an intelligent assistant can help you. Give us an example of what you would say.</h4>
+            <h4 id="leftInstruction">  Imagine you want to watch a movie now. Give us an example of what you would ask an intelligent assistant like Siri or Google Home.</h4>
             <!-- <h4 id="leftInstruction">  If you could ask an intelligent assistant for movie recommendations, what would you say? </h4> -->
             <!-- <img id=“wishList” height="40" width="40" src="/static/images/wish-list-icon3.png" /> -->
         </div>
@@ -82,7 +82,7 @@
                  if (version == "posterVersion") $('#go-next-btn').attr("href","/./tutorial/0/0");
                }
                else{
-                  $('#go-next-btn').html("Go to next scenario");
+                  $('#go-next-btn').html("Next");
                  $('#go-next-btn').attr("href","/OpenQuestions/{{questionNum+1}}");
 
                }
@@ -94,7 +94,7 @@
 
                     {
                           element: '#headlineRow',
-                          intro: 'In this part, think of an example that you would ask for movie recommendations.',
+                          intro: 'In this part, we\'d like you to ask for movie recommendations.',
                           position: 'bottom'
                     },
                     // {
@@ -108,7 +108,7 @@
                     ]
                 });
 
-               if (questionNum==0) introguide.start();
+               //if (questionNum==0) introguide.start();
 
 
                });
