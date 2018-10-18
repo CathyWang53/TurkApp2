@@ -1,5 +1,5 @@
 from flask import (
-    Blueprint, render_template, request
+    Blueprint, render_template, request, make_response
 )
 
 questionNum=1
@@ -12,8 +12,10 @@ bp = Blueprint('OpenQuestions', __name__, url_prefix='/OpenQuestions/<int:questi
 @bp.route('/', methods=('GET', 'POST'))
 def OpenQuestions(questionNum):
 
-    return render_template('OpenQuestions.html',
+    resp = make_response( render_template('OpenQuestions.html',
                            questionNum = questionNum,
                            htmlint=htmlint,
                            queryName="movie"+queryFiles[questionNum]
-                           )
+                           ))
+    resp.set_cookie('category', "Open question")
+    return resp
