@@ -57,6 +57,8 @@ class results_ver_easy(db.Model):
     text = db.Column(db.Text(), nullable=False)
     mp3url = db.Column(db.Text(), nullable=False)
     queryname = db.Column(db.Text(), nullable=False)
+    datetime = db.Column(db.Text())
+    category = db.Column(db.Text())
 
     def __repr__(self):
         return '<results_ver_easy: {}>'.format(self.name)

@@ -8,6 +8,10 @@ instance/
 
 .env
 
-voice/
+voice1/
 
-ver/
+voice2/
+
+ver1/
+
+ver2/

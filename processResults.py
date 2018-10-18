@@ -11,9 +11,9 @@ db = create_engine(db_string)
 result_ver_poster = db.execute("SELECT id,userid,queryname,text,mp3url FROM results where userid like 'A%%'")
 result_ver_easy = db.execute("SELECT id,userid,queryname,text,mp3url FROM results_ver_easy where userid like 'A%%'")
 #result_ver_game = db.execute("SELECT id,userid,queryname,text,mp3url,answerTime FROM results_ver_game where userid like 'A%%'")
-result_ver_game = db.execute("SELECT * FROM results_ver_game where userid like 'A%%'") #id,userid,text,mp3url,queryname,answerTime
+#result_ver_game = db.execute("SELECT * FROM results_ver_game where userid like 'A%%'") #id,userid,text,mp3url,queryname,answerTime,datetime,category,answertime2
 
-print(type(result_ver_poster))
+#print(type(result_ver_poster))
 # for row in result_ver_poster:
 #      b = base64.b64decode(row[4][22:])
 #      mp3file = open(THIS_FOLDER +"/voice/posterVer+"+row[2]+"+"+row[2]+".mp3", "wb")
@@ -22,78 +22,79 @@ print(type(result_ver_poster))
 
 
 with open('results.csv','w') as csv_file:
-    w = csv.writer(csv_file, result_ver_poster.keys())
+    w = csv.writer(csv_file, result_ver_easy.keys())
     #w.writeheader()
     w.writerow(("version","id","userid","queryname","text","mp3Link","answertime"))
 
     for row in result_ver_poster:
-        row1 = []
-        row1.append("posterVer")
-        row1.append(row[0])
-        row1.append(row[1])
-        row1.append(row[2])
-        row1.append(row[3])
+         row1 = []
+         row1.append("posterVer")
+         row1.append(row[0])
+         row1.append(row[1])
+         row1.append(row[2])
+         row1.append(row[3])
 
-        tmp="[]&#39;,➕"
-        for char in tmp:
-            row1[3] = row1[3].replace(char,"") #modify the queryName
+         tmp="[]&#39;,➕"
+         for char in tmp:
+             row1[3] = row1[3].replace(char,"") #modify the queryName
 
-        b = base64.b64decode(row[4][22:])
-        mp3fileName=THIS_FOLDER +"/voice/posterVer+"+row1[3]+"+"+row[1]+".mp3"
-        mp3file = open(mp3fileName, "wb")
-        mp3file.write(b)
-        mp3file.close()
+         b = base64.b64decode(row[4][22:])
+         mp3fileName=THIS_FOLDER +"/voice1/posterVer+"+row1[3]+"+"+row[1]+".mp3"
+         mp3file = open(mp3fileName, "wb")
+         mp3file.write(b)
+         mp3file.close()
 
-        mp3fileName = "file://"+mp3fileName
-        row1.append("=HYPERLINK(\""+mp3fileName+"\")")
-        w.writerow(row1)
+         mp3fileName = "file://"+mp3fileName
+         row1.append("=HYPERLINK(\""+mp3fileName+"\")")
+         w.writerow(row1)
 
     for row in result_ver_easy:
 
-        row1 = []
-        row1.append("easyVer")
-        row1.append(row[0])
-        row1.append(row[1])
-        row1.append(row[2])
-        row1.append(row[3])
+         row1 = []
+         row1.append("easyVer")
+         row1.append(row[0])
+         row1.append(row[1])
+         row1.append(row[2])
+         row1.append(row[3])
 
-        tmp="[]&#39;,➕"
-        for char in tmp:
-            row1[3] = row1[3].replace(char,"") #modify the queryName
+         tmp="[]&#39;,➕"
+         for char in tmp:
+             row1[3] = row1[3].replace(char,"") #modify the queryName
 
-        b = base64.b64decode(row[4][22:])
-        mp3fileName=THIS_FOLDER +"/voice/easyVer+"+row1[3]+"+"+row[1]+".mp3"
-        mp3file = open(mp3fileName, "wb")
-        mp3file.write(b)
-        mp3file.close()
+         b = base64.b64decode(row[4][22:])
+         mp3fileName=THIS_FOLDER +"/voice1/easyVer+"+row1[3]+"+"+row[1]+".mp3"
+         mp3file = open(mp3fileName, "wb")
+         mp3file.write(b)
+         mp3file.close()
 
-        mp3fileName = "file://"+mp3fileName
-        row1.append("=HYPERLINK(\""+mp3fileName+"\")")
+         mp3fileName = "file://"+mp3fileName
+         row1.append("=HYPERLINK(\""+mp3fileName+"\")")
 
-        w.writerow(row1)
+         w.writerow(row1)
 
-    for row in result_ver_game:
-
-        row1 = []
-        row1.append("gameVer")
-        row1.append(row[0])
-        row1.append(row[1])
-        row1.append(row[4])
-        row1.append(row[2])
-
-        tmp="[]&#39;,➕?|"
-        for char in tmp:
-            row1[3] = row1[3].replace(char,"") #modify the queryName
-
-        b = base64.b64decode(row[3][22:])
-        mp3fileName=THIS_FOLDER +"/voice/gameVer+"+row1[3]+"+"+row[1]+"+"+str(row[5])+".mp3"
-        mp3file = open(mp3fileName, "wb")
-        mp3file.write(b)
-        mp3file.close()
-
-
-        mp3fileName = "file://"+mp3fileName
-        row1.append("=HYPERLINK(\""+mp3fileName+"\")")
-        row1.append(row[5])
-
-        w.writerow(row1)
+    # for row in result_ver_game:
+    #
+    #     row1 = []
+    #     row1.append("gameVer")
+    #     row1.append(row[0])
+    #     row1.append(row[1])
+    #     row1.append(row[4])
+    #     row1.append(row[2])
+    #
+    #     tmp="[]&#39;,➕?|"
+    #     for char in tmp:
+    #         row1[3] = row1[3].replace(char,"") #modify the queryName
+    #
+    #     b = base64.b64decode(row[3][22:])
+    #     mp3fileName=THIS_FOLDER +"/voice2/gameVer+"+row1[3]+"+"+row[1]+"+"+str(row[5])+".mp3"
+    #     mp3file = open(mp3fileName, "wb")
+    #     mp3file.write(b)
+    #     mp3file.close()
+    #
+    #     mp3fileName = "file://"+mp3fileName
+    #     row1.append("=HYPERLINK(\""+mp3fileName+"\")")
+    #     row1.append(row[5])
+    #     row1.append(row[6])
+    #     row1.append(row[7])
+    #
+    #     w.writerow(row1)

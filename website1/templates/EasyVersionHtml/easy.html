@@ -4,10 +4,14 @@
 
 {% block movies %}
   </br>
-
-  <h4 id="keyWord"> Film keyword: </h4>
   <div class="form-inline">
-    <ul id="keyWordTable">
+  <h4 id="keyword"> Film keyword: </h4>
+  <button id="help-btn3" title="Help">?</button>
+  <p id="help3"><font size="3" color="#008000">  &nbsp({{queryName[0]}} is a famous director. ) </font></p>
+
+  </div>
+  <div class="form-inline">
+    <ul id="keywordTable">
       {% for query in queryName %}
       <li>{{query}}&nbsp&nbsp </li>
       {% endfor %}
@@ -45,43 +49,44 @@
 
 <script type="text/javascript">
 $(function(){
-  if ({{htmlint}} >= 3){
-    $('#help2').text("Think of other words to replace it.");
+
+  $('#help3').hide();
+  $('#help-btn3').hide();
+  if ({{htmlint+SkipTime}}==4){
+    $('#help-btn3').show();
   }
-  $('#help2').hide();
-
-  $('#help-btn2').mouseover(function(){
-                           $('#help2').show();
-                           });
-  $('#help-btn2').mouseout(function(){
-                          $('#help2').hide();
-                          });
+  $('#help-btn3').mouseover(function(){
+                                        $('#help3').show();
+                                                   });
+  $('#help-btn3').mouseout(function(){
+                                        $('#help3').hide();
+                                                  });
   var introguide = introJs();
-
+  if ({{htmlint+SkipTime}}==14) $('#keyword').text("Your context:");
     introguide.setOptions({
                              steps: [
+                               // {
+                               //       element: '#recording-title',
+                               //       intro: 'Imagine you are finding a particular kind of movies through an intelligent assistant, such as Siri or Amazon Echo.',
+                               //       position: 'bottom'
+                               // },
                                {
-                                     element: '#recording-title',
-                                     intro: 'Imagine you are finding a particular kind of movies through an intelligent assistant, such as Siri or Amazon Echo.',
+                                     element: '#keyword',
+                                     intro: 'In this part, we have provided you with the film keywords and your quries should contain this information.',
                                      position: 'bottom'
                                },
                                {
-                                     element: '#keyWord',
-                                     intro: 'We have provided you with the film keywords and your quries should contain this information.',
-                                     position: 'bottom'
-                               },
-                               {
-                                     element: '#keyWordTable',
+                                     element: '#keywordTable',
                                      intro: 'For example, you should ask for comedies in this scenario.',
                                      position: 'bottom'
                                },
                                {
-                                     element: '#keyWordTable',
-                                     intro: 'It\'s okay if your answers do not include the exact word here because speaking naturally is the most important.',
+                                     element: '#keywordTable',
+                                     intro: 'It\'s okay if your answers do not include the exact word here because speaking naturally is the most important thing.',
                                      position: 'bottom'
                                },
                                {
-                                     element: '#keyWordTable',
+                                     element: '#keywordTable',
                                      intro: 'For example, "comedy" can be replaced by "funny movies", as long as it is natural.',
                                      position: 'bottom'
                                },
@@ -92,17 +97,17 @@ $(function(){
                                // },
                                {
                                      element: '#speak',
-                                     intro: 'Click this button to record your answers. It is good to imagine you are talking to an intelligent assistant and speak naturally. Click "Done" to close this box.',
+                                     intro: 'It is good to imagine you are talking to an intelligent assistant and speak naturally. Click "Done" to close this box.',
                                      position: 'left'
                                },
                                ]
     });
     if ({{htmlint+SkipTime}}==0) introguide.start();
-    if ({{htmlint+SkipTime}} < 8) {
+    if ({{htmlint+SkipTime}} < 14) {
       if ({{htmlint+SkipTime}}%2 == 0) $('#go-next-btn').attr("href","/easy/{{htmlint+1}}/{{SkipTime}}");
       else $('#go-next-btn').attr("href","/easy/{{htmlint}}/{{SkipTime+1}}");
     }
-    else $('#go-next-btn').attr("href","/OpenQuestions/0");
+    else $('#go-next-btn').attr("href","/finish");
   });
 
 
