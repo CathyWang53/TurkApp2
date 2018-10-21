@@ -8,8 +8,8 @@ THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 db_string = "postgres://xhbzhbafkdxrar:8b8215b86776c132f55cc829c96ddc821d3ae50f5bcd07f9e27a84d54853fb75@ec2-174-129-32-37.compute-1.amazonaws.com:5432/d93uramn84njs4"
 
 db = create_engine(db_string)
-result_ver_poster = db.execute("SELECT id,userid,queryname,text,mp3url FROM results where userid like 'A%%'")
-result_ver_easy = db.execute("SELECT id,userid,queryname,text,mp3url FROM results_ver_easy where userid like 'A%%'")
+#result_ver_poster = db.execute("SELECT id,userid,queryname,text,mp3url FROM results where userid like 'A%%'")
+result_ver_easy = db.execute("SELECT id,userid,category,queryname,text,mp3url,datetime FROM results_ver_easy where userid like 'A%%'")
 #result_ver_game = db.execute("SELECT id,userid,queryname,text,mp3url,answerTime FROM results_ver_game where userid like 'A%%'")
 #result_ver_game = db.execute("SELECT * FROM results_ver_game where userid like 'A%%'") #id,userid,text,mp3url,queryname,answerTime,datetime,category,answertime2
 
@@ -21,32 +21,32 @@ result_ver_easy = db.execute("SELECT id,userid,queryname,text,mp3url FROM result
 #      mp3file.close()
 
 
-with open('results.csv','w') as csv_file:
+with open('results/results.csv','w') as csv_file:
     w = csv.writer(csv_file, result_ver_easy.keys())
     #w.writeheader()
-    w.writerow(("version","id","userid","queryname","text","mp3Link","answertime"))
+    w.writerow(("version","id","userid","category","queryname","text","mp3Link","timestamp"))
 
-    for row in result_ver_poster:
-         row1 = []
-         row1.append("posterVer")
-         row1.append(row[0])
-         row1.append(row[1])
-         row1.append(row[2])
-         row1.append(row[3])
-
-         tmp="[]&#39;,➕"
-         for char in tmp:
-             row1[3] = row1[3].replace(char,"") #modify the queryName
-
-         b = base64.b64decode(row[4][22:])
-         mp3fileName=THIS_FOLDER +"/voice1/posterVer+"+row1[3]+"+"+row[1]+".mp3"
-         mp3file = open(mp3fileName, "wb")
-         mp3file.write(b)
-         mp3file.close()
-
-         mp3fileName = "file://"+mp3fileName
-         row1.append("=HYPERLINK(\""+mp3fileName+"\")")
-         w.writerow(row1)
+    # for row in result_ver_poster:
+    #      row1 = []
+    #      row1.append("posterVer")
+    #      row1.append(row[0])
+    #      row1.append(row[1])
+    #      row1.append(row[2])
+    #      row1.append(row[3])
+    #
+    #      tmp="[]&#39;,➕"
+    #      for char in tmp:
+    #          row1[3] = row1[3].replace(char,"") #modify the queryName
+    #
+    #      b = base64.b64decode(row[4][22:])
+    #      mp3fileName=THIS_FOLDER +"/voice1/posterVer+"+row1[3]+"+"+row[1]+".mp3"
+    #      mp3file = open(mp3fileName, "wb")
+    #      mp3file.write(b)
+    #      mp3file.close()
+    #
+    #      mp3fileName = "file://"+mp3fileName
+    #      row1.append("=HYPERLINK(\""+mp3fileName+"\")")
+    #      w.writerow(row1)
 
     for row in result_ver_easy:
 
@@ -56,19 +56,23 @@ with open('results.csv','w') as csv_file:
          row1.append(row[1])
          row1.append(row[2])
          row1.append(row[3])
+         row1.append(row[4])
+
 
          tmp="[]&#39;,➕"
          for char in tmp:
-             row1[3] = row1[3].replace(char,"") #modify the queryName
+             row1[4] = row1[4].replace(char,"") #modify the queryName
 
-         b = base64.b64decode(row[4][22:])
-         mp3fileName=THIS_FOLDER +"/voice1/easyVer+"+row1[3]+"+"+row[1]+".mp3"
+         b = base64.b64decode(row[5][22:])
+         mp3fileName=THIS_FOLDER +"/results/voice3/easyVer+"+row1[4]+"+"+row[1]+".mp3"
          mp3file = open(mp3fileName, "wb")
          mp3file.write(b)
          mp3file.close()
 
          mp3fileName = "file://"+mp3fileName
          row1.append("=HYPERLINK(\""+mp3fileName+"\")")
+
+         row1.append(row[6])
 
          w.writerow(row1)
 

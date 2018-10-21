@@ -10,7 +10,7 @@ bp = Blueprint('easy', __name__, url_prefix='/easy/<int:pyint>/<int:skipTime>')
 queries = [[["comedy"]],
 [["romance"],["Disney"]],
 [["France"],["China"],["Mexico"]],
-[["<2000"],["2010s"],["2000s"]],
+[["< 2000"],["> 2010"],["> 2000"]],
 [["Wes Anderson"],["George Lucas"],["Stephen Spielberg"]],
 [["explosions"], ["robots"],["time travel"]],
 [["exciting plot"],["interesting charactors"],["great acting"]],
@@ -18,10 +18,12 @@ queries = [[["comedy"]],
 [["best"],["popular"],["critically acclaimed"]],
 [["Brad Pitt"],["Harrison Ford"],["Jennifer Lawrence"]],
 [["similar to Titanic"],["like Titanic"]],
-[[">2010","➕", "horror"],["horror","➕", ">2010"]],
+[["2010s","➕", "horror"],["horror","➕", "2010s"]],
 [["Japan","➕","animation"],["animation","➕","Japan"]],
 [["funny","➕","romantic"],["romantic","➕","funny"]],
-[["Friday night"],["with a group of friends"]]
+[["Friday night"],["weekend"]],
+[["with a group of friends"],["with your family"]],
+[["in a thearter now"]]
 ]
 #helps = ["0","Brad Pitt is a famous film star","0"]
 categories = ["genre",
@@ -38,6 +40,8 @@ categories = ["genre",
 "combination",
 "combination",
 "combination",
+"context",
+"context",
 "context"]
 
 @bp.route('/', methods=('GET', 'POST'))

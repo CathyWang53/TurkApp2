@@ -22,20 +22,22 @@
     {% block movies %}
     <div class="row" id="instruction1">
         <div class="col-10">
-            <h4 id="leftInstruction">  Imagine you want to watch a movie now. Give us an example of what you would ask an intelligent assistant like Siri or Google Home.</h4>
+            <h4 id="leftInstruction">  Imagine you want to watch a movie now. Give us an example of what you would ask an intelligent assistant.</h4>
             <!-- <h4 id="leftInstruction">  If you could ask an intelligent assistant for movie recommendations, what would you say? </h4> -->
             <!-- <img id=“wishList” height="40" width="40" src="/static/images/wish-list-icon3.png" /> -->
         </div>
     </div>
     <p></p>
     <div class="row" id="movie-row-1">
-        <div class="col-8" title="movie-row-1">
-            <div class="posters">
-              <img id=“voicemovie” height="240" width="600" src="/static/images/voicemovie.jpg" />
-              <!-- <p> Prictures of intelligent assistant, computers or TVs </p> -->
+      <div class="col-4" title="movie-row-1">
+      </div>
+      <div class="col-8" title="movie-row-1">
+            <!-- <div class="posters">
+              <img id=“voicemovie” height="150" width="150" src="/static/images/voice.png" />
+               <p> Prictures of intelligent assistant, computers or TVs </p>
 
-            </div>
-        </div>
+            </div> -->
+      </div>
     </div>
       {% endblock %}
 
@@ -74,12 +76,12 @@
                $('#leftInstruction').html("<h4> Give us another example of what you would say. </p4>")
                if (questionNum == 2){ //last page
                  $('#leftInstruction').html("<h4> Give us one last example of what you would say. </p4>")
-                 // $('#go-next-btn').html("Finish");
-                 // $('#go-next-btn').attr("href","/finish");
-                 var version = Cookies.get('version');
-                 if (version == "easyVersion") $('#go-next-btn').attr("href","/./easy/0/0");
-                 if (version == "gameVersion") $('#go-next-btn').attr("href","/./game/0/0");
-                 if (version == "posterVersion") $('#go-next-btn').attr("href","/./tutorial/0/0");
+                 $('#go-next-btn').html("Finish");
+                 $('#go-next-btn').attr("href","/finish");
+                 // var version = Cookies.get('version');
+                 // if (version == "easyVersion") $('#go-next-btn').attr("href","/./easy/0/0");
+                 // if (version == "gameVersion") $('#go-next-btn').attr("href","/./game/0/0");
+                 // if (version == "posterVersion") $('#go-next-btn').attr("href","/./tutorial/0/0");
                }
                else{
                   $('#go-next-btn').html("Next");
@@ -94,7 +96,7 @@
 
                     {
                           element: '#headlineRow',
-                          intro: 'In this part, we\'d like you to ask for movie recommendations.',
+                          intro: 'In this part, think of an example that you would ask for movie recommendations.',
                           position: 'bottom'
                     },
                     // {
@@ -108,7 +110,7 @@
                     ]
                 });
 
-               //if (questionNum==0) introguide.start();
+               if (questionNum==0) introguide.start();
 
 
                });
