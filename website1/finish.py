@@ -5,7 +5,7 @@ from flask import (
 from website1 import db
 from website1.models import feedbacks
 
-bp = Blueprint('finish', __name__, url_prefix='/finish')
+bp = Blueprint('finish', __name__, url_prefix='/finish0')
 
 @bp.route('/', methods=('GET', 'POST'))
 def wlcm():

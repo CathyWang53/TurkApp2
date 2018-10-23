@@ -7,10 +7,10 @@ htmlint=0 #no use at all, only a variable in base.html
 
 queryFiles=["open Question 1", "open Question 2", "open Question 3"]
 
-bp = Blueprint('OpenQuestions', __name__, url_prefix='/OpenQuestions/<int:questionNum>')
+bp = Blueprint('OpenQuestions', __name__, url_prefix='/OpenQuestions/<int:questionNum>/<int:htmlint>')
 
 @bp.route('/', methods=('GET', 'POST'))
-def OpenQuestions(questionNum):
+def OpenQuestions(questionNum,htmlint):
 
     resp = make_response( render_template('OpenQuestions.html',
                            questionNum = questionNum,

@@ -10,7 +10,8 @@ bp = Blueprint('easy', __name__, url_prefix='/easy/<int:pyint>/<int:skipTime>')
 queries = [[["comedy"]],
 [["romance"],["Disney"]],
 [["France"],["China"],["Mexico"]],
-[["< 2000"],["> 2010"],["> 2000"]],
+[["after 2000"],["since 2000"]],
+[["2010s"],["1980s"]],
 [["Wes Anderson"],["George Lucas"],["Stephen Spielberg"]],
 [["explosions"], ["robots"],["time travel"]],
 [["exciting plot"],["interesting charactors"],["great acting"]],
@@ -23,12 +24,13 @@ queries = [[["comedy"]],
 [["funny","➕","romantic"],["romantic","➕","funny"]],
 [["Friday night"],["weekend"]],
 [["with a group of friends"],["with your family"]],
-[["in a thearter now"]]
+[["in theaters now"]]
 ]
 #helps = ["0","Brad Pitt is a famous film star","0"]
 categories = ["genre",
 "genre",
 "region",
+"time",
 "time",
 "director",
 "deep feature 1",

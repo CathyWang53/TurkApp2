@@ -22,7 +22,7 @@
     {% block movies %}
     <div class="row" id="instruction1">
         <div class="col-10">
-            <h4 id="leftInstruction">  Imagine you want to watch a movie now. Give us an example of what you would ask an intelligent assistant.</h4>
+            <h4 id="leftInstruction">  Imagine you want to watch a movie now. Give us an example of what you would ask a friend.</h4>
             <!-- <h4 id="leftInstruction">  If you could ask an intelligent assistant for movie recommendations, what would you say? </h4> -->
             <!-- <img id=“wishList” height="40" width="40" src="/static/images/wish-list-icon3.png" /> -->
         </div>
@@ -45,7 +45,7 @@
     {% block help %}
             <div class="help1" id="help1">
                 <p>Instructions:</p>
-                <p>Think of 3 ways to ask for recommendations from an intelligent assistant, such as Siri or Amazon Echo.</p>
+                <p>Think of 3 ways to ask for recommendations from a friend.</p>
                 <p>To move to the next page, click speak button and ask for movies. Then click "next". It's good to speak naturally.</p>
             </div>
     {% endblock %}
@@ -71,13 +71,14 @@
              $(function(){
 
                var questionNum={{questionNum}};
-               $('#recording-title').html("<h4> \"I can help you find movies. What do you like?\"")
+               // $('#recording-title').html("<h4> \"I can help you find movies. What do you like?\"")
                if (questionNum != 0)
                $('#leftInstruction').html("<h4> Give us another example of what you would say. </p4>")
+
                if (questionNum == 2){ //last page
                  $('#leftInstruction').html("<h4> Give us one last example of what you would say. </p4>")
                  $('#go-next-btn').html("Finish");
-                 $('#go-next-btn').attr("href","/finish");
+                 $('#go-next-btn').attr("href","/finish0");
                  // var version = Cookies.get('version');
                  // if (version == "easyVersion") $('#go-next-btn').attr("href","/./easy/0/0");
                  // if (version == "gameVersion") $('#go-next-btn').attr("href","/./game/0/0");
@@ -85,7 +86,7 @@
                }
                else{
                   $('#go-next-btn').html("Next");
-                 $('#go-next-btn').attr("href","/OpenQuestions/{{questionNum+1}}");
+                 $('#go-next-btn').attr("href","/OpenQuestions/{{questionNum+1}}/{{htmlint*2}}");
 
                }
 
