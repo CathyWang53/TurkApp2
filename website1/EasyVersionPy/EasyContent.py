@@ -7,44 +7,78 @@ pyint=0
 skipTime=0
 
 bp = Blueprint('easy', __name__, url_prefix='/easy/<int:pyint>/<int:skipTime>')
-queries = [[["comedy"]],
-[["romance"],["Disney"]],
+# queries = [[["comedy"]],
+# [["romance"],["action"]],
+# [["France"],["China"],["Mexico"]],
+# [["after 2000"],["since 2000"],["2010s"],["1980s"]],
+# [["Wes Anderson"],["George Lucas"],["Stephen Spielberg"]],
+# [["explosions"], ["robots"],["time travel"]],
+# [["exciting plot"],["interesting charactors"],["great acting"]],
+# [["The Hunger Games"],["The Aviator"], ["When Harry Met Sally..."]],
+# [["best"],["popular"],["critically acclaimed"]],
+# [["Brad Pitt"],["Harrison Ford"],["Jennifer Lawrence"]],
+# [["similar to Titanic"],["like Titanic"]],
+#
+# [["2010s","➕", "sci-fi"],["sci-fi","➕", "2010s"]],
+# [["Japan","➕","animation"],["animation","➕","Japan"]],
+# [["funny","➕","romantic"],["romantic","➕","funny"]],
+# [["action","➕","no violence" ],["no violence","➕","action" ]],
+# [["family movie" ,"➕","no animation"],["family movie","➕","no animation"]],
+# [["horror","➕", "not old"],["not old","➕","horror"]],
+# [["similar to Titanic","➕", "not sad"],["not sad","➕","similar to Titanic"]],
+#
+# [["Friday night"],["weekend"]],
+# [["with a group of friends"],["with your family"]],
+# [["in theaters now"]]
+# ]
+
+queries = [
+[["comedy"]],
 [["France"],["China"],["Mexico"]],
-[["after 2000"],["since 2000"]],
-[["2010s"],["1980s"]],
-[["Wes Anderson"],["George Lucas"],["Stephen Spielberg"]],
-[["explosions"], ["robots"],["time travel"]],
-[["exciting plot"],["interesting charactors"],["great acting"]],
-[["The Hunger Games"],["The Aviator"], ["When Harry Met Sally..."]],
-[["best"],["popular"],["critically acclaimed"]],
-[["Brad Pitt"],["Harrison Ford"],["Jennifer Lawrence"]],
-[["similar to Titanic"],["like Titanic"]],
-[["2010s","➕", "horror"],["horror","➕", "2010s"]],
-[["Japan","➕","animation"],["animation","➕","Japan"]],
-[["funny","➕","romantic"],["romantic","➕","funny"]],
-[["Friday night"],["weekend"]],
-[["with a group of friends"],["with your family"]],
-[["in theaters now"]]
+[["after 2000"],["since 2000"],["2010s"],["1980s"]],
+
+[["2010s","➕", "sci-fi"],["sci-fi","➕", "2010s"]],
+
+
+[["action","➕","no violence"],["no violence","➕","action" ]],
+[["family movie","➕","no animation"],["no animation","➕","family movie"]],
+[["comedy","➕", "not stupid"],["not stupid","➕","comedy"]],
+[["horror","➕","not thriller"],["not thriller","➕","horror"]],
+[["similar to Titanic","➕", "not sad"],["not sad","➕","similar to Titanic"]],
+[["drama","➕","not old"],["not old","➕","drama"]],
+[["Leonardo DiCaprio","➕","have not watched"],["have not watched","➕","Leonardo DiCaprio"]]
 ]
 #helps = ["0","Brad Pitt is a famous film star","0"]
+
 categories = ["genre",
-"genre",
-"region",
+"Region",
 "time",
-"time",
-"director",
-"deep feature 1",
-"deep feature 2",
-"name",
-"quality",
-"actor",
-"movie based",
 "combination",
-"combination",
-"combination",
-"context",
-"context",
-"context"]
+"no-combination",
+"no-combination",
+"no-combination",
+"no-combination",
+"no-combination",
+"no-combination",
+"no-combination"]
+
+# categories = ["genre",
+# "genre",
+# "region",
+# "time",
+# "director",
+# "deep feature 1",
+# "deep feature 2",
+# "name",
+# "quality",
+# "actor",
+# "movie based",
+# "combination",
+# "combination",
+# "combination",
+# "context",
+# "context",
+# "context"]
 
 @bp.route('/', methods=('GET', 'POST'))
 def game(pyint,skipTime):

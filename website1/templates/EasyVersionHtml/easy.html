@@ -28,7 +28,7 @@
 {% block help %}
         <div class="help1" id="help1">
             <p>Instructions:</p>
-            <p> Imagine you are asking a friend for movie recommendations. </p>
+            <p> Imagine you are asking an intelligent assistant for movie recommendations. </p>
             <p> We have provided you with the film keywords
               and your quries should contain this information.
               It's okay if your answers do not include the exact words shown on the screen
@@ -50,8 +50,8 @@ $(function(){
 
   $('#help3').hide();
   $('#help-btn3').hide();
-  if ({{htmlint+SkipTime}}==5){
-    $('#help3').show();
+  if ({{htmlint+SkipTime}}==4){
+    //$('#help3').show();
   }
 
   // if ({{htmlint+SkipTime}}==11){
@@ -94,23 +94,23 @@ $(function(){
                                },
                                ]
     });
-    if ({{htmlint+SkipTime}}==15) introguide.start();
+    //if ({{htmlint+SkipTime}}==15) introguide.start();
   }
 
     if ({{htmlint+SkipTime}}==0)
     {
       introguide.setOptions({
                                steps: [
-                                 // {
-                                 //       element: '#recording-title',
-                                 //       intro: 'Imagine you are finding a particular kind of movies through an intelligent assistant, such as Siri or Amazon Echo.',
-                                 //       position: 'bottom'
-                                 // },
                                  {
                                        element: '#recording-title',
-                                       intro: 'Imagine you are asking a friend for movie recommendations.',
+                                       intro: 'Imagine you are finding a particular kind of movies through an intelligent assistant, such as Siri or Amazon Echo.',
                                        position: 'bottom'
                                  },
+                                 // {
+                                 //       element: '#recording-title',
+                                 //       intro: 'Imagine you are asking a friend for movie recommendations.',
+                                 //       position: 'bottom'
+                                 // },
                                  {
                                        element: '#keyword',
                                        intro: 'We have provided you with the film keywords and your queries should contain this information.',
@@ -138,18 +138,19 @@ $(function(){
                                  // },
                                  {
                                        element: '#speak',
-                                       intro: 'It is good to imagine you are talking to a friend. Speak naturally. Click "Done" to close this box.',
+                                       intro: 'It is good to imagine you are talking to an intelligent assistant. Speak naturally. Click "Done" to close this box.',
                                        position: 'left'
                                  },
                                  ]
       });
       introguide.start();
     }
-    if ({{htmlint+SkipTime}} < 17) {
+    if ({{htmlint+SkipTime}} < 10) {
       if ({{htmlint+SkipTime}}%2 == 0) $('#go-next-btn').attr("href","/easy/{{htmlint+1}}/{{SkipTime}}");
       else $('#go-next-btn').attr("href","/easy/{{htmlint}}/{{SkipTime+1}}");
     }
-    else $('#go-next-btn').attr("href","/OpenQuestions/0/1");
+    //else $('#go-next-btn').attr("href","/OpenQuestions/0/1");
+    else $('#go-next-btn').attr("href","/finish0");
   });
 
 
