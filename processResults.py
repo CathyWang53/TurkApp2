@@ -22,7 +22,7 @@ result_ver_easy = db.execute("SELECT id,userid,category,queryname,text,mp3url,da
 #      mp3file.close()
 
 
-with open('results/results_ver5.csv','w') as csv_file:
+with open('results/results_ver6.csv','w') as csv_file:
     w = csv.writer(csv_file, result_ver_easy.keys())
     #w.writeheader()
     w.writerow(("version","id","userid","category","queryname","text","mp3Link","timestamp"))
@@ -65,7 +65,7 @@ with open('results/results_ver5.csv','w') as csv_file:
              row1[4] = row1[4].replace(char,"") #modify the queryName
 
          b = base64.b64decode(row[5][22:])
-         mp3fileName=THIS_FOLDER +"/results/voice4/easyVer+"+row1[4]+"+"+row[1]+".mp3"
+         mp3fileName=THIS_FOLDER +"/results/voice6/easyVer+"+row1[4]+"+"+row[1]+".mp3"
          mp3file = open(mp3fileName, "wb")
          mp3file.write(b)
          mp3file.close()

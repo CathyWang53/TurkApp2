@@ -51,7 +51,7 @@ $(function(){
   $('#help3').hide();
   $('#help-btn3').hide();
   if ({{htmlint+SkipTime}}==4){
-    //$('#help3').show();
+    $('#help3').show();
   }
 
   // if ({{htmlint+SkipTime}}==11){
@@ -77,7 +77,7 @@ $(function(){
   //                                       $('#help3').hide();
   //                                                 });
   var introguide = introJs();
-  if ({{htmlint+SkipTime}}>=15)
+  if ({{htmlint+SkipTime}}>=17)
   {
     $('#keyword').text("Your scenario:");
     introguide.setOptions({
@@ -94,7 +94,7 @@ $(function(){
                                },
                                ]
     });
-    //if ({{htmlint+SkipTime}}==15) introguide.start();
+    if ({{htmlint+SkipTime}}==17) introguide.start();
   }
 
     if ({{htmlint+SkipTime}}==0)
@@ -145,12 +145,12 @@ $(function(){
       });
       introguide.start();
     }
-    if ({{htmlint+SkipTime}} < 10) {
+    if ({{htmlint+SkipTime}} < 19) {
       if ({{htmlint+SkipTime}}%2 == 0) $('#go-next-btn').attr("href","/easy/{{htmlint+1}}/{{SkipTime}}");
       else $('#go-next-btn').attr("href","/easy/{{htmlint}}/{{SkipTime+1}}");
     }
-    //else $('#go-next-btn').attr("href","/OpenQuestions/0/1");
-    else $('#go-next-btn').attr("href","/finish0");
+    else $('#go-next-btn').attr("href","/OpenQuestions/0/1");
+    //else $('#go-next-btn').attr("href","/finish0");
   });
 
 
