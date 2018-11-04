@@ -17,7 +17,7 @@ print(type(result_ver_poster))
 #      mp3file.close()
 
 
-with open('results/ver6/feedbacks_6.csv','w') as csv_file:
+with open('results/feedbacks_r_1.csv','w') as csv_file:
     w = csv.writer(csv_file, result_ver_poster.keys())
     #w.writeheader()
     w.writerow(("version","id","userid","duration","feedback"))
